@@ -32,7 +32,8 @@
     <link rel="stylesheet" href="/assets/css/atlantis.min.css">
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="/assets/css/demo.css">
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
 </head>
 
 <body>
@@ -61,7 +62,6 @@
 
             <!-- Navbar Header -->
             <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-
                 <div class="container-fluid">
                     <div class="collapse" id="search-nav">
                         <form class="navbar-left navbar-form nav-search mr-md-3">
@@ -83,9 +83,90 @@
                             </a>
                         </li>
                     </ul>
+                    <form class="navbar-right mr-md-2">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-dark btn-round" type="button"
+                                style="font-size:16px;color: white;" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                <span class="btn-label mr-2">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </span>
+                                Login
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </nav>
             <!-- End Navbar -->
+        </div>
+        <!-- Start Login Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close d-flex align-items-center justify-content-center"
+                            data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="fas fa-window-close"></span>
+                        </button>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-6 d-flex">
+                            <img src="/assets/images/login.png" alt="login" width="500px">
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <div class="modal-body p-5 img d-flex align-items-center color-2">
+                                <div class="text w-100 py-0 py-md-5">
+                                    <h2 class="text-center">LOGIN</h2>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <div class="placeholder-style">
+                                                <label for="email" class="label">Username</label>
+                                                <div class="input-group shadow-sm mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <button class="btn btn-style" type="button">
+                                                            <i class="far fa-user"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="email"
+                                                        placeholder="Username " />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="placeholder-style">
+                                                <label for="password" class="label">Kata Sandi</label>
+                                                <div class="input-group shadow-sm mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <button class="btn btn-style" type="button">
+                                                            <i class="fas fa-lock"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="password"
+                                                        placeholder="Kata Sandi" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="wkwk" />
+                                                    <span class="form-check-sign">I agree to terms & conditions</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <a type="submit" class="btn form-control btn-primary btn-round" href="#">
+                                                Masuk
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Sidebar -->
         <div class="sidebar sidebar-style-2" data-background-color="blue2">
