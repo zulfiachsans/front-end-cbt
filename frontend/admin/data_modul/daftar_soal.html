@@ -28,8 +28,16 @@
     </script>
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/atlantis.min.css">
+    <!-- include summernote css/js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
 </head>
 
 <body>
@@ -132,7 +140,7 @@
         <div class="sidebar sidebar-style-2">
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
                 <div class="sidebar-content">
-                    <ul class="nav">
+                    <ul class="nav nav-primary">
                         <li class="nav-section">
                             <span class="sidebar-mini-icon">
                                 <i class="fa fa-ellipsis-h"></i>
@@ -304,7 +312,7 @@
             <div class="content">
                 <div class="page-inner">
                     <div class="page-header">
-                        <h4 class="page-title">Topik</h4>
+                        <h4 class="page-title">Daftar Soal</h4>
                         <ul class="breadcrumbs">
                             <li class="nav-home">
                                 <a href="#">
@@ -321,14 +329,13 @@
                                 <i class="flaticon-right-arrow"></i>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Topik</a>
+                                <a href="#">Daftar Soal</a>
                             </li>
                         </ul>
                     </div>
                     <div class="row mt--2 mb-3">
                         <div class="col-md-12">
-                            <h5>Daftar topik, penambahan topik, pengubahan topik, dan penghapusan topik berdasarkan
-                                Modul
+                            <h5>Daftar soal dan jawaban berdasarkan Modul dan Topik
                             </h5>
                         </div>
                     </div>
@@ -336,18 +343,21 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">Pilih Modul</div>
+                                    <div class="card-title">Pilih Topik</div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row row-demo-grid">
                                         <div class="col">
-                                            <h3>Modul</h3>
-                                            <p>Pilih modul terlebih dahulu untuk menampilkan dan menambah topik</p>
+                                            <h3>Pilih Topik</h3>
+                                            <p>Pilih terlebih dahulu Topik yang akan digunakan sebelum menambah atau
+                                                mengubah soal</p>
                                         </div>
                                         <div class="col mt-2">
-                                            <div id="data-kelas">
-                                                <select name="modul" id="modul" class="form-control input-sm">
-                                                    <option value="9">Default</option>
+                                            <div id="topik">
+                                                <select name="topik" id="topik" class="form-control input-sm">
+                                                    <optgroup label="Modul Default">
+                                                        <option value="7">Soal Uji Coba</option>
+                                                    </optgroup>
                                                 </select>
                                             </div>
                                         </div>
@@ -361,113 +371,47 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-title">
-                                        Daftar Topik
+                                        Daftar Soal Soal Uji Coba
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="d-flex">
-                                        <button class="btn btn-primary btn-round ml-auto mb-3" data-toggle="modal"
-                                            data-target="#addRowModal">
-                                            Tambah Topik
+                                    <div class="d-flex ">
+                                        <button class="btn btn-primary btn-round ml-auto mb-3"><i
+                                                class="mr-2 fa fa-download"></i>
+                                            Cetak Soal
                                         </button>
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog"
-                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header text-center">
-                                                    <h4 class="modal-title">
-                                                        <span class="fw-mediumbold">
-                                                            Tambah</span>
-                                                        <span class="fw-light">
-                                                            Soal
-                                                        </span>
-                                                    </h4>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form role="form">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group form-floating-label">
-                                                                    <input id="addGelombang" type="text"
-                                                                        class="form-control input-border-bottom"
-                                                                        required="">
-                                                                    <label for="addGelombang" class="placeholder">Nama
-                                                                        Topik</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group form-floating-label">
-                                                                    <input id="addDeskripsi" type="text"
-                                                                        class="form-control input-border-bottom"
-                                                                        required="">
-                                                                    <label for="addDeskripsi"
-                                                                        class="placeholder">Desikripsi</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <label>Status</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="tambah-status" name="tambah-status"
-                                                                        value="AKTIF" readonly="">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer no-bd justify-content-center">
-                                                    <button type="button" id="simpan"
-                                                        class="btn btn-primary">Tambah</button>
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-dismiss="modal">Batal</button>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <table
                                         class="table table-bordered table-responsive-md border-top border-left border-right table-own"
                                         style="white-space: nowrap;">
-                                        <thead align="center">
-                                            <th>No</th>
-                                            <th>Nama Topik</th>
-                                            <th>Deskripsi</th>
-                                            <th>Status</th>
-                                            <th colspan="2">Action</th>
+                                        <thead>
+                                            <th class="text-center">No</th>
+                                            <th>Soal</th>
+                                            <th>Jawaban</th>
+                                            <th colspan="2" class="text-center">Action</th>
                                         </thead>
-                                        <tbody align="center">
+                                        <tbody>
                                             <tr>
-                                                <td>1</td>
-                                                <td>CBT PMB 2023</td>
+                                                <td class="text-center">1</td>
                                                 <td>CBT PMB 2023</td>
                                                 <td>Aktif</td>
-                                                <td><a onclick="" style="cursor: pointer;"
-                                                        class="btn btn-default btn-sm">Edit</a>
-                                                </td>
-                                                <td>
-                                                    <input type="checkbox" name="">
+                                                <td align="center">
+                                                    <a href=""><i class="fas fa-plus-circle" data-toggle="tooltip"
+                                                            data-placement="bottom" title="Tambah Jawaban"
+                                                            style="color:black;"></i></a>
+                                                    <a href="" data-target="#addRowModal" data-toggle="modal"><i
+                                                            class="ml-2 fas fa-edit" data-toggle="tooltip"
+                                                            data-placement="bottom" title="Edit"></i></a>
+                                                    <a href=""><i class="ml-2 fas fa-window-close" data-toggle="tooltip"
+                                                            data-placement="bottom" title="Delete"
+                                                            style="color:red;"></i></a>
+
                                                 </td>
                                             </tr>
 
                                         </tbody>
                                     </table>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="d-flex flex-row-reverse bd-highlight">
-                                        <div class="p-2 bd-highlight"><button
-                                                class="btn btn-primary btn-rounded-md ml-auto mb-3">
-                                                Pilih Semua
-                                            </button></div>
-                                        <div class="p-2 bd-highlight"><button
-                                                class="btn btn-default btn-rounded-md ml-auto mb-3">
-                                                Hapus
-                                            </button></div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -484,7 +428,26 @@
             </footer>
         </div>
     </div>
-
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Tambahkan deskripsi',
+            tabsize: 2,
+            height: 60,
+            toolbar: [
+                ['lang', ['specialChar']],
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
     <!--   Core JS Files   -->
     <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
@@ -498,27 +461,12 @@
     <script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
 
-    <!-- Chart JS -->
-    <script src="/assets/js/plugin/chart.js/chart.min.js"></script>
-
     <!-- jQuery Sparkline -->
     <script src="/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-    <!-- Chart Circle -->
-    <script src="/assets/js/plugin/chart-circle/circles.min.js"></script>
 
     <!-- Datatables -->
     <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
 
-    <!-- Bootstrap Notify -->
-    <script src="/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
-    <!-- jQuery Vector Maps -->
-    <script src="/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-    <script src="/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
-
-    <!-- Sweet Alert -->
-    <script src="/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
@@ -526,17 +474,18 @@
     <!-- Atlantis DEMO methods, don't include it in your project! -->
     <script src="/assets/js/setting-demo.js"></script>
     <script>
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Data anda berhasil di tambah',
-                'success'
-            )
-        });
         $('.table-own').DataTable({
             "ordering": false,
         });
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            )
+        });
     </script>
+
 </body>
 
 </html>
