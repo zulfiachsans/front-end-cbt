@@ -157,17 +157,17 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./data_modul/pengabdian.html">
+                                        <a href="import_soal.html">
                                             <span class="sub-item">Import Soal</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./data_modul/pengabdian.html">
+                                        <a href="pengabdian.html">
                                             <span class="sub-item">Daftar Soal</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./data_modul/pengabdian.html">
+                                        <a href="pengabdian.html">
                                             <span class="sub-item">File Manager</span>
                                         </a>
                                     </li>
@@ -369,7 +369,7 @@
                                             </button>
                                         </div>
                                         <div class="p-2 bd-highlight">
-                                            <button class="btn btn-default btn-round ml-auto mb-3">
+                                            <button id="simpan" class="btn btn-default btn-round ml-auto mb-3">
                                                 Refresh Soal
                                             </button>
                                         </div>
@@ -380,11 +380,11 @@
                                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header text-center">
-                                                    <h4 class="modal-title">
+                                                    <h4 class="modal-title w-100">
                                                         <span class="fw-mediumbold">
                                                             Tambah</span>
                                                         <span class="fw-light">
-                                                            Topik
+                                                            Soal
                                                         </span>
                                                     </h4>
                                                     <button type="button" class="close" data-dismiss="modal"
@@ -461,12 +461,30 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group from-group-default">
+                                                                    <label class="control-label">Kunci Jawaban
+                                                                        Singkat</label>
+                                                                    <input type="text" class="form-control input-sm"
+                                                                        id="tambah-kunci-jawaban-singkat"
+                                                                        name="tambah-kunci-jawaban-singkat">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group from-group-default">
+                                                                    <p>Kunci Jawaban untuk Tipe Soal
+                                                                        Jawaban Singkat.
+                                                                        Pastikan kunci jawaban hanya satu kata untuk
+                                                                        menghindari kesalahan penulisan. Untuk angka
+                                                                        desimal gunakan tanda koma.</p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </form>
                                                 </div>
                                                 <div class="modal-footer no-bd justify-content-center">
-                                                    <button id="simpan" type="button"
-                                                        class="btn btn-primary">Tambah</button>
+                                                    <button type="button" id="simpan"
+                                                        class="btn btn-primary">Simpan</button>
                                                     <button type="button" class="btn btn-danger"
                                                         data-dismiss="modal">Batal</button>
                                                 </div>
@@ -489,10 +507,11 @@
                                                 <td>CBT PMB 2023</td>
                                                 <td>Aktif</td>
                                                 <td align="center">
-                                                    <a href=""><i class="fas fa-eye" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Preview"
+                                                    <a href=""><i class="fas fa-plus-circle" data-toggle="tooltip"
+                                                            data-placement="bottom" title="Tambah Jawaban"
                                                             style="color:black;"></i></a>
-                                                    <a href=""><i class="ml-2 fas fa-edit" data-toggle="tooltip"
+                                                    <a href="" data-target="#addRowModal" data-toggle="modal"><i
+                                                            class="ml-2 fas fa-edit" data-toggle="tooltip"
                                                             data-placement="bottom" title="Edit"></i></a>
                                                     <a href=""><i class="ml-2 fas fa-window-close" data-toggle="tooltip"
                                                             data-placement="bottom" title="Delete"
@@ -533,20 +552,6 @@
         </div>
     </div>
     <script>
-        swal({
-            title: "Good job!",
-            text: "You clicked the button!",
-            icon: "success",
-            buttons: {
-                confirm: {
-                    text: "Kembali",
-                    value: true,
-                    visible: true,
-                    className: "btn btn-primary",
-                    closeModal: true
-                }
-            }
-        });
         $('#summernote').summernote({
             placeholder: 'Tambahkan deskripsi',
             tabsize: 2,
@@ -594,6 +599,13 @@
     <script>
         $('.table-own').DataTable({
             "ordering": false,
+        });
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            )
         });
     </script>
 

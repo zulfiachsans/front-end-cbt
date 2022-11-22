@@ -298,7 +298,7 @@
             <div class="content">
                 <div class="page-inner">
                     <div class="page-header">
-                        <h4 class="page-title">Soal</h4>
+                        <h4 class="page-title">Mengimport Soal</h4>
                         <ul class="breadcrumbs">
                             <li class="nav-home">
                                 <a href="#">
@@ -315,13 +315,13 @@
                                 <i class="flaticon-right-arrow"></i>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Soal</a>
+                                <a href="#">Import Soal</a>
                             </li>
                         </ul>
                     </div>
                     <div class="row mt--2 mb-3">
                         <div class="col-md-12">
-                            <h5>Mengelola soal berdasarkan modul dan topik
+                            <h5>Melakukan Import Soal berdasarkan modul dan topik
                             </h5>
                         </div>
                     </div>
@@ -335,8 +335,8 @@
                                     <div class="row row-demo-grid">
                                         <div class="col">
                                             <h3>Pilih Topik</h3>
-                                            <p>Pilih terlebih dahulu Topik yang akan digunakan sebelum menambah atau
-                                                mengubah soal</p>
+                                            <p>Pilih terlebih dahulu Topik yang akan digunakan sebelum melakukan import
+                                                soal</p>
                                         </div>
                                         <div class="col mt-2">
                                             <div id="topik">
@@ -357,164 +357,30 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-title">
-                                        Daftar Soal Soal Uji Coba
+                                        Import Soal
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="d-flex flex-row-reverse bd-highlight">
-                                        <div class="p-2 bd-highlight">
-                                            <button class="btn btn-primary btn-round ml-auto mb-3" data-toggle="modal"
-                                                data-target="#addRowModal">
-                                                Tambah Soal
-                                            </button>
-                                        </div>
-                                        <div class="p-2 bd-highlight">
-                                            <button class="btn btn-default btn-round ml-auto mb-3">
-                                                Refresh Soal
-                                            </button>
-                                        </div>
+                                    <div class="d-flex">
+                                        <button class="btn btn-primary btn-round ml-auto mb-3">
+                                            <i class="mr-2 fa fa-download"></i>
+                                            Form Excel Pilihan Ganda
+                                        </button>
                                     </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog"
-                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header text-center">
-                                                    <h4 class="modal-title">
-                                                        <span class="fw-mediumbold">
-                                                            Tambah</span>
-                                                        <span class="fw-light">
-                                                            Topik
-                                                        </span>
-                                                    </h4>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form role="form">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="form-group form-group-default">
-                                                                    <label for="deskripsi">Soal</label>
-                                                                    <div id="summernote"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group from-group-default">
-                                                                    <label>Tambah
-                                                                        File Audio</label>
-                                                                    <input type="file" id="tambah-audio"
-                                                                        name="tambah-audio">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group from-group-default">
-                                                                    <p style="color: red;">*File audio yang akan
-                                                                        ditambah pada soal. ( mp3).
-                                                                        Jika ingin menghapus audio pada soal, maka
-                                                                        Soalnya harus dihapus dahulu, setelah itu
-                                                                        membuat soal ulang.</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group from-group-default">
-                                                                    <label class="control-label">Putar Sekali</label>
-                                                                    <p class="mt--2">*Memutar Audio
-                                                                        sebanyak satu
-                                                                        kali dalam satu Tes
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group from-group-default">
-                                                                    <select class="form-control input-sm"
-                                                                        id="tambah-putar" name="tambah-putar">
-                                                                        <option value="0">Tidak</option>
-                                                                        <option value="1">Ya</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group from-group-default">
-                                                                    <label class="control-label">Tipe Soal</label>
-                                                                    <select class="form-control input-sm"
-                                                                        id="tambah-tipe" name="tambah-tipe">
-                                                                        <option value="1">Pilihan Ganda</option>
-                                                                        <option value="2">Esai</option>
-                                                                        <option value="3">Jawaban Singkat</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group from-group-default">
-                                                                    <label class="control-label">Tingkat
-                                                                        Kesulitan</label>
-                                                                    <select class="form-control input-sm"
-                                                                        id="tambah-kesulitan" name="tambah-kesulitan">
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                        <option value="3">3</option>
-                                                                        <option value="4">4</option>
-                                                                        <option value="5">5</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer no-bd justify-content-center">
-                                                    <button id="simpan" type="button"
-                                                        class="btn btn-primary">Tambah</button>
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-dismiss="modal">Batal</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="form-group">
+                                        <label>Pilih File</label><br>
+                                        <input type="file" id="userfile" name="userfile">
+                                        <p class="mt-2 help-block">Soal yang dapat import adalah soal jenis Pilihan
+                                            ganda.
+                                            Tidak dapat melakukan import soal yang terdapat gambar atau audio.File Excel
+                                            yang didukung adalah Microsoft Excel 2003 dan
+                                            Microsoft Excel 2007</p>
                                     </div>
-
-                                    <table
-                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
-                                        style="white-space: nowrap;">
-                                        <thead>
-                                            <th class="text-center">No</th>
-                                            <th>Soal</th>
-                                            <th>Jawaban</th>
-                                            <th colspan="2" class="text-center">Action</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center">1</td>
-                                                <td>CBT PMB 2023</td>
-                                                <td>Aktif</td>
-                                                <td align="center">
-                                                    <a href=""><i class="fas fa-eye" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Preview"
-                                                            style="color:black;"></i></a>
-                                                    <a href=""><i class="ml-2 fas fa-edit" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Edit"></i></a>
-                                                    <a href=""><i class="ml-2 fas fa-window-close" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Delete"
-                                                            style="color:red;"></i></a>
-
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="d-flex flex-row-reverse bd-highlight">
-                                        <div class="p-2 bd-highlight"><button
-                                                class="btn btn-primary btn-rounded-md ml-auto mb-3">
-                                                Pilih Semua
-                                            </button>
-                                        </div>
-                                        <div class="p-2 bd-highlight"><button
-                                                class="btn btn-default btn-rounded-md ml-auto mb-3">
-                                                Hapus
-                                            </button></div>
+                                    <div class="d-flex "><button class="btn btn-primary btn-rounded-md ml-auto mb-3">
+                                            Import
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -533,20 +399,6 @@
         </div>
     </div>
     <script>
-        swal({
-            title: "Good job!",
-            text: "You clicked the button!",
-            icon: "success",
-            buttons: {
-                confirm: {
-                    text: "Kembali",
-                    value: true,
-                    visible: true,
-                    className: "btn btn-primary",
-                    closeModal: true
-                }
-            }
-        });
         $('#summernote').summernote({
             placeholder: 'Tambahkan deskripsi',
             tabsize: 2,
@@ -561,9 +413,6 @@
                 ['insert', ['link', 'picture', 'video']],
                 ['view', ['fullscreen', 'codeview', 'help']]
             ]
-        });
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
         });
     </script>
     <!--   Core JS Files   -->
@@ -594,6 +443,9 @@
     <script>
         $('.table-own').DataTable({
             "ordering": false,
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
         });
     </script>
 
