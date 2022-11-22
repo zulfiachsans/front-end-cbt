@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Atlantis Lite - Bootstrap 4 Admin Dashboard</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="/assets/img/icon.ico" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": ["Lato:300,400,700,900"]
+            },
+            custom: {
+                "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons"
+                ],
+                urls: ['/assets/css/fonts.min.css']
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/atlantis.min.css">
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-header">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="blue2">
+
+                <a href="index.html" class="logo">
+                    <img src="/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
+                </a>
+                <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="icon-menu"></i>
+                    </span>
+                </button>
+                <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+                <div class="nav-toggle">
+                    <button class="btn btn-toggle toggle-sidebar">
+                        <i class="icon-menu"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- End Logo Header -->
+
+            <!-- Navbar Header -->
+            <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+                <div class="container-fluid">
+                    <div class="collapse" id="search-nav">
+                        <form class="navbar-left navbar-form nav-search mr-md-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button type="submit" class="btn btn-search pr-1">
+                                        <i class="fa fa-search search-icon"></i>
+                                    </button>
+                                </div>
+                                <input type="text" placeholder="Search ..." class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                        <li class="nav-item toggle-nav-search hidden-caret">
+                            <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button"
+                                aria-expanded="false" aria-controls="search-nav">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="navbar-right mr-md-2">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-dark btn-round" type="button"
+                                style="font-size:16px;color: white;" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                <span class="btn-label mr-2">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </span>
+                                Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+        <!-- Start Login Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close d-flex align-items-center justify-content-center"
+                            data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="fas fa-window-close"></span>
+                        </button>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-6 d-flex">
+                            <img src="/assets/images/login.png" alt="login" width="500px">
+                            <div class="centered font-italic">"Selamat datang"</div>
+                            <div class="bottom-left"><img src="/assets/images/icons.png" alt="login" width="90px">
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <div class="modal-body p-5 img d-flex align-items-center color-2">
+                                <div class="text w-100 py-0 py-md-5">
+                                    <h2 class="text-center">LOGIN</h2>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <div class="placeholder-style">
+                                                <label for="email" class="label">Username</label>
+                                                <div class="input-group shadow-sm mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <button class="btn btn-style" type="button">
+                                                            <i class="far fa-user"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="email"
+                                                        placeholder="Username " />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="placeholder-style">
+                                                <label for="password" class="label">Kata Sandi</label>
+                                                <div class="input-group shadow-sm mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <button class="btn btn-style" type="button">
+                                                            <i class="fas fa-lock"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="password"
+                                                        placeholder="Kata Sandi" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <button type="submit" class="btn form-control btn-primary btn-round"
+                                                href="#">
+                                                LOGIN
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Login Modal -->
+
+        <!-- Sidebar -->
+        <div class="sidebar sidebar-style-2" data-background-color="blue2">
+            <div class="sidebar-wrapper scrollbar scrollbar-inner">
+                <div class="sidebar-content">
+                    <ul class="nav nav-primary">
+                        <li class="nav-section">
+                            <span class="sidebar-mini-icon">
+                                <i class="fa fa-ellipsis-h"></i>
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html">
+                                <i class="fas fa-tachometer-alt active"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_one">
+                                <i class="fas fa-school"></i>
+                                <p>Kerjasama Tridharma</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_one">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="../table_one/pendidikan.html">
+                                            <span class="sub-item">Pendidikan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_one/penelitian.html">
+                                            <span class="sub-item">Penelitian</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_one/pengabdian.html">
+                                            <span class="sub-item">Pengabdian Masyarakat</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_two">
+                                <i class="fas fa-user-graduate"></i>
+                                <p>Mahasiswa</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_two">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="seleksi_mahasiswa.html">
+                                            <span class="sub-item">Seleksi Mahasiswa</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mahasiswa_asing.html">
+                                            <span class="sub-item">Mahasiswa Asing</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_three">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <p>Dosen</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_three">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="../table_three/dosen_tetap_perguruan.html">
+                                            <span class="sub-item"> Dosen Tetap Perguruan Tinggi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/dosen_pembimbing_utama.html">
+                                            <span class="sub-item">Dosen Pembimbing Utama Tugas Akhir</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/ekuivalen_waktu_mengajar.html">
+                                            <span class="sub-item">Ekuivalen Waktu Mengajar Penuh (EWMP) Dosen Tetap
+                                                Perguruan Tinggi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/dosen_tidak_tetap.html">
+                                            <span class="sub-item">Dosen Tidak Tetap</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/dosen_industri.html">
+                                            <span class="sub-item">Dosen Industri/Praktisi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/pengakuan.html">
+                                            <span class="sub-item">Pengakuan/Rekognisi Dosen</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/penelitian_dtps.html">
+                                            <span class="sub-item">Penelitian DTPS</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/pkm_dtps.html">
+                                            <span class="sub-item">PkM DTPS</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/publikasi_ilmiah.html">
+                                            <span class="sub-item">Publikasi Ilmiah DTPS</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/pagelaran.html">
+                                            <span class="sub-item">Pagelaran/Pameran/Presentasi/Publikasi Ilmiah
+                                                DTPS</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/karya_ilmiah.html">
+                                            <span class="sub-item">Karya Ilmiah DTPS yang Disitasi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/produk.html">
+                                            <span class="sub-item">Produk/Jasa DTPS yang Diadopsi oleh
+                                                Industri/Masyarakat</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_three/luaran_penelitian.html">
+                                            <span class="sub-item">Luaran Penelitian/PkM Lainnya oleh DTPS</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../table_four/penggunaan_dana.html">
+                                <i class="fas fa-money-bill-alt"></i>
+                                <p>Penggunaan Dana</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_five">
+                                <i class="fas fa-book-reader"></i>
+                                <p>Kurikulum</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_five">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="../table_five/kurikulum_capaian.html">
+                                            <span class="sub-item">Kurikulum, Capaian Pembelajaran, dan Rencana
+                                                Pembelajaran</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_five/integrasi_kegiatan.html">
+                                            <span class="sub-item">Integrasi Kegiatan Penelitian/PkM dalam
+                                                Pembelajaran</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_five/kepuasan_mahasiswa.html">
+                                            <span class="sub-item">Kepuasan Mahasiswa</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_six">
+                                <i class="fas fa-bookmark"></i>
+                                <p>Penelitian</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_six">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="../table_six/penelitian_dtps_mahasiswa.html">
+                                            <span class="sub-item">Penelitian DTPS yang Melibatkan Mahasiswa</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../table_six/penelitian_dtps_rujukan.html">
+                                            <span class="sub-item">Penelitian DTPS yang Menjadi Rujukan Tema
+                                                Tesis/Disertasi</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../table_seven/pkm_dtps_mahasiswa.html">
+                                <i class="fas fa-book"></i>
+                                <p>PkM DTPS yang <br> Melibatkan Mahasiswa</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_eight">
+                                <i class="fas fa-database"></i>
+                                <p>Tabel 8</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_eight">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="ipk_lulusan.html">
+                                            <span class="sub-item">IPK Lulusan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="prestasi_akademik.html">
+                                            <span class="sub-item">Prestasi Akademik</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="prestasi_non_akademik.html">
+                                            <span class="sub-item">Prestasi non-Akademik</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="masa_studi_lulusan.html">
+                                            <span class="sub-item">Masa Studi Lulusan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="waktu_tunggu_lulusan.html">
+                                            <span class="sub-item">Waktu Tunggu Lulusan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="kesesuaian_bidang.html">
+                                            <span class="sub-item">Kesesuaian Bidang Kerja</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tempat_kerja.html">
+                                            <span class="sub-item">Tempat Kerja Lulusan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="kepuasan_pengguna.html">
+                                            <span class="sub-item">Kepuasan Pengguna Lulusan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="publikasi_ilmiah.html">
+                                            <span class="sub-item">Publikasi Ilmiah Mahasiswa</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="pagelaran.html">
+                                            <span class="sub-item">Pagelaran Mahasiswa</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="karya_ilmiahdisitasi.html">
+                                            <span class="sub-item">Karya Ilmiah Mahasiswa yang Disitasi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="produk_jasa_mahasiswa.html">
+                                            <span class="sub-item">Produk Mahasiswa</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="produk_jasa_mahasiswa.html">
+                                            <span class="sub-item">Luaran Penelitian</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+        <div class="main-panel">
+            <div class="content">
+                <div class="page-inner">
+                    <div class="page-header">
+                        <h4 class="page-title">Masa Studi Lulusan
+                        </h4>
+                        <ul class="breadcrumbs">
+                            <li class="nav-home">
+                                <a href="#">
+                                    <i class="flaticon-home"></i>
+                                </a>
+                            </li>
+                            <li class="separator">
+                                <i class="flaticon-right-arrow"></i>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Tabel 8</a>
+                            </li>
+                            <li class="separator">
+                                <i class="flaticon-right-arrow"></i>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Masa Studi Lulusan</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Masa Studi Lulusan
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="section">
+                                        <div class="row card-title">
+                                            <h2 class="mb-3">Program Studi pada program Diploma Tiga</h2>
+                                        </div>
+                                        <table
+                                            class="table table-bordered table-responsive border-top border-left border-right table-add"
+                                            style="white-space: nowrap;">
+                                            <thead align="center">
+                                                <th rowspan="2">Tahun Masuk</th>
+                                                <th rowspan="2">Jumlah Mahasiswa <br>Diterima</th>
+                                                <th colspan="5">Jumlah Mahasiswa yang lulus pada</th>
+                                                <th rowspan="2">Jumlah Lulusan s.d. <br>akhir TS</th>
+                                                <th rowspan="2">Rata-rata <br>Masa Studi</th>
+                                                <tr>
+                                                    <th>akhir <br>TS-4</th>
+                                                    <th>akhir <br>TS-3</th>
+                                                    <th>akhir <br>TS-2</th>
+                                                    <th>akhir <br>TS-1</th>
+                                                    <th>akhir <br>TS</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr align="center" style="background-color: #D9D9D9;">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td>7</td>
+                                                    <td>8</td>
+                                                    <td>9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-4</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>19</td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-3</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-3</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="section">
+                                        <div class="row card-title mt-3">
+                                            <h2 class="mb-3">Program Studi pada program Sarjana atau Sarjana Terapan
+                                            </h2>
+                                        </div>
+                                        <table
+                                            class="table table-bordered table-responsive border-top border-left border-right table-add"
+                                            style="white-space: nowrap;">
+                                            <thead align="center">
+                                                <th rowspan="2">Tahun Masuk</th>
+                                                <th rowspan="2">Jumlah Mahasiswa <br>Diterima</th>
+                                                <th colspan="7">Jumlah Mahasiswa yang lulus pada</th>
+                                                <th rowspan="2">Jumlah Lulusan s.d. <br>akhir TS</th>
+                                                <th rowspan="2">Rata-rata <br>Masa Studi</th>
+                                                <tr>
+                                                    <th>akhir <br>TS-6</th>
+                                                    <th>akhir <br>TS-5</th>
+                                                    <th>akhir <br>TS-4</th>
+                                                    <th>akhir <br>TS-3</th>
+                                                    <th>akhir <br>TS-2</th>
+                                                    <th>akhir <br>TS-1</th>
+                                                    <th>akhir <br>TS</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr align="center" style="background-color: #D9D9D9;">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td>7</td>
+                                                    <td>8</td>
+                                                    <td>9</td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-6</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>19</td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-5</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-4</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-3</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="section">
+                                        <div class="row card-title mt-3">
+                                            <h2 class="mb-3">Program Studi pada program Magister atau Magister Terapan
+                                            </h2>
+                                        </div>
+                                        <table
+                                            class="table table-bordered table-responsive-md border-top border-left border-right table-add"
+                                            style="white-space: nowrap;">
+                                            <thead align="center">
+                                                <th rowspan="2">Tahun Masuk</th>
+                                                <th rowspan="2">Jumlah Mahasiswa <br>Diterima</th>
+                                                <th colspan="4">Jumlah Mahasiswa yang lulus pada</th>
+                                                <th rowspan="2">Jumlah Lulusan s.d. <br>akhir TS</th>
+                                                <th rowspan="2">Rata-rata <br>Masa Studi</th>
+                                                <tr>
+                                                    <th>akhir <br>TS-3</th>
+                                                    <th>akhir <br>TS-2</th>
+                                                    <th>akhir <br>TS-1</th>
+                                                    <th>akhir <br>TS</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr align="center" style="background-color: #D9D9D9;">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td>7</td>
+                                                    <td>8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-6</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>19</td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-5</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-4</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-3</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td></td>
+                                                    <td>23</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="section">
+                                        <div class="row card-title mt-3">
+                                            <h2 class="mb-3">Program Studi pada program Doktor atau Doktor Terapan
+                                            </h2>
+                                        </div>
+                                        <table
+                                            class="table table-bordered table-responsive border-top border-left border-right table-add"
+                                            style="white-space: nowrap;">
+                                            <thead align="center">
+                                                <th rowspan="2">Tahun Masuk</th>
+                                                <th rowspan="2">Jumlah Mahasiswa <br>Diterima</th>
+                                                <th colspan="7">Jumlah Mahasiswa yang lulus pada</th>
+                                                <th rowspan="2">Jumlah Lulusan s.d. <br>akhir TS</th>
+                                                <th rowspan="2">Rata-rata <br>Masa Studi</th>
+                                                <tr>
+                                                    <th>akhir <br>TS-6</th>
+                                                    <th>akhir <br>TS-5</th>
+                                                    <th>akhir <br>TS-4</th>
+                                                    <th>akhir <br>TS-3</th>
+                                                    <th>akhir <br>TS-2</th>
+                                                    <th>akhir <br>TS-1</th>
+                                                    <th>akhir <br>TS</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr align="center" style="background-color: #D9D9D9;">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td>7</td>
+                                                    <td>8</td>
+                                                    <td>9</td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-6</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>19</td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-5</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-4</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>0</td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TS-3</td>
+                                                    <td>29</td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td style="background-color: #BFBFBF;"></td>
+                                                    <td>23</td>
+                                                    <td>3,03</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Rata-rata Masa Studi
+                                    </div>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="chart-container">
+                                        <canvas id="barOne"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Perbandingan jumlah mahasiswa lulus tepat waktu dan
+                                        peluruhan
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container">
+                                        <canvas id="barTwo"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="copyright ml-auto">
+                            2022, made with <i class="fa fa-heart heart text-danger"></i> by <a
+                                href="https://www.unimma.ac.id">Biro Sistem Informasi</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--   Core JS Files   -->
+        <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
+        <script src="/assets/js/core/popper.min.js"></script>
+        <script src="/assets/js/core/bootstrap.min.js"></script>
+
+        <!-- jQuery UI -->
+        <script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+        <!-- jQuery Scrollbar -->
+        <script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+
+        <!-- Chart JS -->
+        <script src="/assets/js/plugin/chart.js/chart.min.js"></script>
+
+        <!-- Atlantis JS -->
+        <script src="/assets/js/atlantis.min.js"></script>
+        <script>
+            var myBarChart = new Chart(barOne, {
+                type: 'bar',
+                data: {
+                    labels: ["TS-4", "TS-3", "TS-2"],
+                    datasets: [{
+                        label: "Lokal",
+                        data: [3.03, 3, 0],
+                        backgroundColor: 'rgb(23, 125, 255)',
+                        borderColor: 'rgb(23, 125, 255)',
+                    }, ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                return tooltipItem.yLabel;
+                            }
+                        }
+                    }
+
+                }
+            });
+            var myBarChart = new Chart(barTwo, {
+                type: 'bar',
+                data: {
+                    labels: ["TS-4", "TS-3", "TS-2"],
+                    datasets: [{
+                            label: "TS-4",
+                            data: [30.1, 29, 26, 36.2, 27.5],
+                            backgroundColor: 'rgb(23, 125, 255)',
+                            borderColor: 'rgb(23, 125, 255)',
+                        },
+                        {
+                            label: "TS-3",
+                            data: [40.4, 44.4, 52.4, 43.1, 48.1],
+                            backgroundColor: "red",
+                            borderColor: 'rgb(23, 125, 255)',
+                        },
+                        {
+                            label: "TS-2",
+                            data: [20.5, 19.2, 13, 13.8, 16],
+                            backgroundColor: "green",
+                        },
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    tooltips: {
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                return tooltipItem.yLabel;
+                            }
+                        }
+                    }
+
+                }
+            });
+        </script>
+</body>
+
+</html>
