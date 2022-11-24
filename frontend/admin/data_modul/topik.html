@@ -3,10 +3,9 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Atlantis Lite - Bootstrap 4 Admin Dashboard</title>
+    <title>Computer Based-Test</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="/assets/img/icon.ico" type="image/x-icon" />
-
+    <link rel="icon" href="/assets/images/lambang-unimma.png" type="image/x-icon" />
     <!-- Fonts and icons -->
     <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
@@ -26,7 +25,6 @@
             }
         });
     </script>
-
     <!-- CSS Files -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/atlantis.min.css">
@@ -132,7 +130,7 @@
         <div class="sidebar sidebar-style-2">
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
                 <div class="sidebar-content">
-                    <ul class="nav">
+                    <ul class="nav nav-primary">
                         <li class="nav-section">
                             <span class="sidebar-mini-icon">
                                 <i class="fa fa-ellipsis-h"></i>
@@ -189,17 +187,17 @@
                             <div class="collapse" id="table_two">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="./table_two/seleksi_mahasiswa.html">
+                                        <a href="../data_peserta/daftar_group.html">
                                             <span class="sub-item">Daftar Group</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./table_two/mahasiswa_asing.html">
+                                        <a href="../data_peserta/daftar_peserta.html">
                                             <span class="sub-item">Daftar Peserta</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./table_two/mahasiswa_asing.html">
+                                        <a href="../data_peserta/import_data.html">
                                             <span class="sub-item">Import Data Peserta</span>
                                         </a>
                                     </li>
@@ -215,37 +213,37 @@
                             <div class="collapse" id="table_three">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="./table_three/dosen_tetap_perguruan.html">
+                                        <a href="../data_tes/tambah_tes.html">
                                             <span class="sub-item"> Tambah Tes</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="penelitian.html">
+                                        <a href="../data_tes/daftar_tes.html">
                                             <span class="sub-item">Daftar Tes</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="penelitian.html">
+                                        <a href="../data_tes/evaluasi_tes.html">
                                             <span class="sub-item">Evaluasi Tes</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="penelitian.html">
+                                        <a href="../data_tes/hasil_tes.html">
                                             <span class="sub-item">Hasil Tes</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="penelitian.html">
+                                        <a href="../data_tes/rekap_hasil.html">
                                             <span class="sub-item">Rekap Hasil Tes</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="penelitian.html">
+                                        <a href="../data_tes/token.html">
                                             <span class="sub-item">Token</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="penelitian.html">
+                                        <a href="../data_tes/hasil_tes_operator.html">
                                             <span class="sub-item">Hasil Tes Operator</span>
                                         </a>
                                     </li>
@@ -261,7 +259,7 @@
                             <div class="collapse" id="table_five">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="./table_five/kurikulum_capaian.html">
+                                        <a href="../tool/backup_data.html">
                                             <span class="sub-item">Backup Data</span>
                                         </a>
                                     </li>
@@ -277,17 +275,17 @@
                             <div class="collapse" id="table_six">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="./table_six/penelitian_dtps_mahasiswa.html">
+                                        <a href="../pengaturan/pengaturan_user.html">
                                             <span class="sub-item">Pengaturan User</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./table_six/penelitian_dtps_rujukan.html">
+                                        <a href="../pengaturan/pengaturan_level.html">
                                             <span class="sub-item">Pengaturan Level</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./table_six/penelitian_dtps_rujukan.html">
+                                        <a href="../pengaturan/pengaturan_menu.html">
                                             <span class="sub-item">Pengaturan Menu</span>
                                         </a>
                                     </li>
@@ -509,7 +507,6 @@
 
     <!-- Datatables -->
     <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
-
     <!-- Bootstrap Notify -->
     <script src="/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
@@ -522,21 +519,12 @@
 
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
-
-    <!-- Atlantis DEMO methods, don't include it in your project! -->
-    <script src="/assets/js/setting-demo.js"></script>
     <script>
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Data anda berhasil di tambah',
-                'success'
-            )
-        });
         $('.table-own').DataTable({
             "ordering": false,
         });
     </script>
+
 </body>
 
 </html>

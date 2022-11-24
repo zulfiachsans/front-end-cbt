@@ -26,17 +26,9 @@
             }
         });
     </script>
-
     <!-- CSS Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/atlantis.min.css">
-    <!-- include summernote css/js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
 </head>
 
@@ -161,27 +153,27 @@
                             <div class="collapse" id="table_one">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="topik.html">
+                                        <a href="../data_modul/topik.html">
                                             <span class="sub-item">Topik</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="soal.html">
+                                        <a href="../data_modul/soal.html">
                                             <span class="sub-item">Soal</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="import_soal.html">
+                                        <a href="../data_modul/import_soal.html">
                                             <span class="sub-item">Import Soal</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="daftar_soal.html">
+                                        <a href="../data_modul/daftar_soal.html">
                                             <span class="sub-item">Daftar Soal</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="file_manager.html">
+                                        <a href="../data_modul/file_manager.html">
                                             <span class="sub-item">File Manager</span>
                                         </a>
                                     </li>
@@ -312,7 +304,7 @@
             <div class="content">
                 <div class="page-inner">
                     <div class="page-header">
-                        <h4 class="page-title">Daftar Soal</h4>
+                        <h4 class="page-title">Peserta</h4>
                         <ul class="breadcrumbs">
                             <li class="nav-home">
                                 <a href="#">
@@ -329,13 +321,14 @@
                                 <i class="flaticon-right-arrow"></i>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Daftar Soal</a>
+                                <a href="#">Daftar Peserta</a>
                             </li>
                         </ul>
                     </div>
                     <div class="row mt--2 mb-3">
                         <div class="col-md-12">
-                            <h5>Daftar soal dan jawaban berdasarkan Modul dan Topik
+                            <h5>Daftar peserta, penambahan peserta, pengubahan data peserta, dan penghapusan data
+                                peserta
                             </h5>
                         </div>
                     </div>
@@ -343,21 +336,20 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">Pilih Topik</div>
+                                    <div class="card-title">Pilih Group</div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row row-demo-grid">
                                         <div class="col">
-                                            <h3>Pilih Topik</h3>
-                                            <p>Pilih terlebih dahulu Topik yang akan digunakan sebelum menambah atau
-                                                mengubah soal</p>
+                                            <h3>Pilih Group</h3>
+                                            <p>Pilih group terlebih dahulu untuk menampilkan dan menambah data Peserta
+                                            </p>
                                         </div>
                                         <div class="col mt-2">
-                                            <div id="topik">
-                                                <select name="topik" id="topik" class="form-control input-sm">
-                                                    <optgroup label="Modul Default">
-                                                        <option value="7">Soal Uji Coba</option>
-                                                    </optgroup>
+                                            <div id="data-kelas">
+                                                <select name="group" id="group" class="form-control input-sm">
+                                                    <option value="semua">Semua Group</option>
+                                                    <option value="5">XI MM</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -371,58 +363,134 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-title">
-                                        Daftar Soal Soal Uji Coba
+                                        Daftar Peserta
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="d-flex ">
-                                        <button class="btn btn-primary btn-round ml-auto mb-3"><i
-                                                class="mr-2 fa fa-download"></i>
-                                            Cetak Soal
+                                        <button class="btn btn-primary btn-round ml-auto mb-3" data-toggle="modal"
+                                            data-target="#addRowModal">
+                                            Tambah Peserta
                                         </button>
-
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header text-center">
+                                                        <h4 class="modal-title w-100">
+                                                            <span class="fw-mediumbold">
+                                                                Tambah</span>
+                                                            <span class="fw-light">
+                                                                Peserta
+                                                            </span>
+                                                        </h4>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form role="form">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group from-group-default">
+                                                                        <label class="control-label">Username</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mt--4">
+                                                                    <div class="form-group from-group-default">
+                                                                        <input type="text" class="form-control"
+                                                                            id="tambah-username" name="tambah-username"
+                                                                            placeholder="Username Peserta">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group from-group-default">
+                                                                        <label class="control-label">Password</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mt--4">
+                                                                    <div class="form-group from-group-default">
+                                                                        <input type="password" class="form-control"
+                                                                            id="tambah-password" name="tambah-password">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group from-group-default">
+                                                                        <label class="control-label">Nama Lengkap
+                                                                            Peserta</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mt--4">
+                                                                    <div class="form-group from-group-default">
+                                                                        <input type="text" class="form-control"
+                                                                            id="tambah-nama" name="tambah-nama"
+                                                                            placeholder="Nama Lengkap Peserta">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group from-group-default">
+                                                                        <label class="control-label">Email</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mt--4">
+                                                                    <div class="form-group from-group-default">
+                                                                        <input type="text" class="form-control"
+                                                                            id="tambah-email" name="tambah-email"
+                                                                            placeholder="Email Peserta (Boleh dikosongkan)">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group from-group-default">
+                                                                        <label class="control-label">Group</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mt--4">
+                                                                    <div class="form-group from-group-default">
+                                                                        <select name="tambah-group" id="tambah-group"
+                                                                            class="form-control input-sm">
+                                                                            <option value="5">XI MM</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer no-bd justify-content-center">
+                                                        <button type="button" id="simpan"
+                                                            class="btn btn-primary">Simpan</button>
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Batal</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <table
-                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
+                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own "
                                         style="white-space: nowrap;">
                                         <thead>
-                                            <th class="text-center">No</th>
-                                            <th>Tipe Soal</th>
-                                            <th>Soal</th>
-                                            <th class="text-center">Action</th>
+                                            <th>No</th>
+                                            <th>Username</th>
+                                            <th>Nama</th>
+                                            <th>Kelompok</th>
+                                            <th class="text-center" colspan="2">Action</th>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="text-center">1</td>
-                                                <td>Pilihan ganda</td>
-                                                <td>
-                                                    <table class="table" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td colspan="3">
-                                                                    <p>Apa Kepanjangan dari SMP?</p>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td width="5%">1.</td>
-                                                                <td width="5%"><b>Benar</b></td>
-                                                                <td width="75%">
-                                                                    <p>Sekolah Menengah Pertama</p>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
+                                                <td>1</td>
+                                                <td>Joko</td>
+                                                <td>Joko Susanto</td>
+                                                <td>XI MM</td>
                                                 <td align="center">
                                                     <a href="" data-target="#addRowModal" data-toggle="modal"><i
                                                             class="ml-2 fas fa-edit" data-toggle="tooltip"
                                                             data-placement="bottom" title="Edit Soal"></i></a>
-                                                    <a href="" data-target="#addRowModal" data-toggle="modal"><i
-                                                            class="ml-2 fas fa-edit" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Edit Jawaban"
-                                                            style="color:black;"></i></a>
-
+                                                </td>
+                                                <td align="center">
+                                                    <input type="checkbox" name="" data-toggle="tooltip"
+                                                        data-placement="bottom" title="Pilih Semua">
                                                 </td>
                                             </tr>
 
@@ -444,26 +512,6 @@
             </footer>
         </div>
     </div>
-    <script>
-        $('#summernote').summernote({
-            placeholder: 'Tambahkan deskripsi',
-            tabsize: 2,
-            height: 60,
-            toolbar: [
-                ['lang', ['specialChar']],
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video']],
-                ['view', ['fullscreen', 'codeview', 'help']]
-            ]
-        });
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        });
-    </script>
     <!--   Core JS Files   -->
     <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
@@ -482,25 +530,16 @@
 
     <!-- Datatables -->
     <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
-
-
+    <script>
+        $('.table-own').DataTable({
+            "ordering": false,
+        });
+    </script>
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
 
     <!-- Atlantis DEMO methods, don't include it in your project! -->
     <script src="/assets/js/setting-demo.js"></script>
-    <script>
-        $('.table-own').DataTable({
-            "ordering": false,
-        });
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Data anda berhasil di simpan',
-                'success'
-            )
-        });
-    </script>
 
 </body>
 

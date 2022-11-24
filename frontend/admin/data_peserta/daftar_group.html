@@ -161,27 +161,27 @@
                             <div class="collapse" id="table_one">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="topik.html">
+                                        <a href="../data_modul/topik.html">
                                             <span class="sub-item">Topik</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="soal.html">
+                                        <a href="../data_modul/soal.html">
                                             <span class="sub-item">Soal</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="import_soal.html">
+                                        <a href="../data_modul/import_soal.html">
                                             <span class="sub-item">Import Soal</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="daftar_soal.html">
+                                        <a href="../data_modul/daftar_soal.html">
                                             <span class="sub-item">Daftar Soal</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="file_manager.html">
+                                        <a href="../data_modul/file_manager.html">
                                             <span class="sub-item">File Manager</span>
                                         </a>
                                     </li>
@@ -197,17 +197,17 @@
                             <div class="collapse" id="table_two">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="../data_peserta/daftar_group.html">
+                                        <a href="daftar_group.html">
                                             <span class="sub-item">Daftar Group</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../data_peserta/daftar_peserta.html">
+                                        <a href="daftar_peserta.html">
                                             <span class="sub-item">Daftar Peserta</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../data_peserta/import_data.html">
+                                        <a href="import_data.html">
                                             <span class="sub-item">Import Data Peserta</span>
                                         </a>
                                     </li>
@@ -312,7 +312,7 @@
             <div class="content">
                 <div class="page-inner">
                     <div class="page-header">
-                        <h4 class="page-title">Daftar Soal</h4>
+                        <h4 class="page-title">Group</h4>
                         <ul class="breadcrumbs">
                             <li class="nav-home">
                                 <a href="#">
@@ -329,13 +329,13 @@
                                 <i class="flaticon-right-arrow"></i>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Daftar Soal</a>
+                                <a href="#">Group</a>
                             </li>
                         </ul>
                     </div>
                     <div class="row mt--2 mb-3">
                         <div class="col-md-12">
-                            <h5>Daftar soal dan jawaban berdasarkan Modul dan Topik
+                            <h5>Daftar group, penambahan group, pengubahan group, dan penghapusan group
                             </h5>
                         </div>
                     </div>
@@ -343,86 +343,84 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">Pilih Topik</div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row row-demo-grid">
-                                        <div class="col">
-                                            <h3>Pilih Topik</h3>
-                                            <p>Pilih terlebih dahulu Topik yang akan digunakan sebelum menambah atau
-                                                mengubah soal</p>
-                                        </div>
-                                        <div class="col mt-2">
-                                            <div id="topik">
-                                                <select name="topik" id="topik" class="form-control input-sm">
-                                                    <optgroup label="Modul Default">
-                                                        <option value="7">Soal Uji Coba</option>
-                                                    </optgroup>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
                                     <div class="card-title">
-                                        Daftar Soal Soal Uji Coba
+                                        Daftar Group
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="d-flex ">
-                                        <button class="btn btn-primary btn-round ml-auto mb-3"><i
-                                                class="mr-2 fa fa-download"></i>
-                                            Cetak Soal
+                                        <button class="btn btn-primary btn-round ml-auto mb-3" data-toggle="modal"
+                                            data-target="#addRowModal">
+                                            Tambah Group
                                         </button>
-
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header text-center">
+                                                        <h4 class="modal-title w-100">
+                                                            <span class="fw-mediumbold">
+                                                                Tambah</span>
+                                                            <span class="fw-light">
+                                                                Group
+                                                            </span>
+                                                        </h4>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form role="form">
+                                                            <div class="row mt-3">
+                                                                <div class="col-md-12 mt-2">
+                                                                    <div class="form-group from-group-default">
+                                                                        <label class="control-label">Nama Group</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mt--3">
+                                                                    <div class="form-group from-group-default">
+                                                                        <input type="text" class="form-control"
+                                                                            id="tambah-group" name="tambah-group"
+                                                                            placeholder="Nama Group">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mt--2">
+                                                                    <div class="form-group from-group-default">
+                                                                        <p style="color: red;">NB : Group digunakan
+                                                                            untuk mengelompokkan setiap user
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer no-bd justify-content-center">
+                                                        <button type="button" id="simpan"
+                                                            class="btn btn-primary">Simpan</button>
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Batal</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <table
                                         class="table table-bordered table-responsive-md border-top border-left border-right table-own"
                                         style="white-space: nowrap;">
                                         <thead>
                                             <th class="text-center">No</th>
-                                            <th>Tipe Soal</th>
-                                            <th>Soal</th>
+                                            <th>Nama Group</th>
                                             <th class="text-center">Action</th>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td class="text-center">1</td>
                                                 <td>Pilihan ganda</td>
-                                                <td>
-                                                    <table class="table" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td colspan="3">
-                                                                    <p>Apa Kepanjangan dari SMP?</p>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td width="5%">1.</td>
-                                                                <td width="5%"><b>Benar</b></td>
-                                                                <td width="75%">
-                                                                    <p>Sekolah Menengah Pertama</p>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
                                                 <td align="center">
                                                     <a href="" data-target="#addRowModal" data-toggle="modal"><i
                                                             class="ml-2 fas fa-edit" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Edit Soal"></i></a>
-                                                    <a href="" data-target="#addRowModal" data-toggle="modal"><i
-                                                            class="ml-2 fas fa-edit" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Edit Jawaban"
-                                                            style="color:black;"></i></a>
-
+                                                            data-placement="bottom" title="Edit"></i></a>
                                                 </td>
                                             </tr>
 
