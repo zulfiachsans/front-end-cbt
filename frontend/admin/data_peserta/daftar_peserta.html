@@ -26,9 +26,17 @@
             }
         });
     </script>
+
     <!-- CSS Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/atlantis.min.css">
+    <!-- include summernote css/js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
 </head>
 
@@ -189,17 +197,17 @@
                             <div class="collapse" id="table_two">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="../data_peserta/daftar_group.html">
+                                        <a href="daftar_group.html">
                                             <span class="sub-item">Daftar Group</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../data_peserta/daftar_peserta.html">
+                                        <a href="daftar_peserta.html">
                                             <span class="sub-item">Daftar Peserta</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../data_peserta/import_data.html">
+                                        <a href="import_data.html">
                                             <span class="sub-item">Import Data Peserta</span>
                                         </a>
                                     </li>
@@ -468,34 +476,50 @@
                                         </div>
                                     </div>
                                     <table
-                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own "
+                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
+                                        style="white-space: nowrap;">
+                                        <thead align="center">
+                                            <th>No</th>
+                                            <th>Username</th>
+                                            <th>Nama</th>
+                                            <th>Kelompok</th>
+                                            <th>Action</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr align="center">
+                                                <td>1</td>
+                                                <td>2021</td>
+                                                <td>Gelombang 3</td>
+                                                <td>Data Pembayaran, CBT</td>
+                                                <td>17-07-2021</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- <table
+                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
                                         style="white-space: nowrap;">
                                         <thead>
                                             <th>No</th>
                                             <th>Username</th>
                                             <th>Nama</th>
+                                            <!-- <th>No</th>
+                                            <th>Username</th>
+                                            <th>Nama</th>
                                             <th>Kelompok</th>
-                                            <th class="text-center" colspan="2">Action</th>
-                                        </thead>
+                                            <th class="text-center" colspan="2">Action</th> -->
+                                    <!-- </thead>
                                         <tbody>
                                             <tr>
-                                                <td>1</td>
-                                                <td>Joko</td>
-                                                <td>Joko Susanto</td>
-                                                <td>XI MM</td>
+                                                <td class="text-center">1</td>
+                                                <td>Pilihan ganda</td>
                                                 <td align="center">
                                                     <a href="" data-target="#addRowModal" data-toggle="modal"><i
                                                             class="ml-2 fas fa-edit" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Edit Soal"></i></a>
-                                                </td>
-                                                <td align="center">
-                                                    <input type="checkbox" name="" data-toggle="tooltip"
-                                                        data-placement="bottom" title="Pilih Semua">
+                                                            data-placement="bottom" title="Edit"></i></a>
                                                 </td>
                                             </tr>
-
                                         </tbody>
-                                    </table>
+                                    </table> --> -->
                                 </div>
                             </div>
                         </div>
@@ -512,6 +536,26 @@
             </footer>
         </div>
     </div>
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Tambahkan deskripsi',
+            tabsize: 2,
+            height: 60,
+            toolbar: [
+                ['lang', ['specialChar']],
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
     <!--   Core JS Files   -->
     <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
@@ -530,16 +574,25 @@
 
     <!-- Datatables -->
     <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
-    <script>
-        $('.table-own').DataTable({
-            "ordering": false,
-        });
-    </script>
+
+
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
 
     <!-- Atlantis DEMO methods, don't include it in your project! -->
     <script src="/assets/js/setting-demo.js"></script>
+    <script>
+        $('.table-own').DataTable({
+            "ordering": false,
+        });
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            )
+        });
+    </script>
 
 </body>
 
