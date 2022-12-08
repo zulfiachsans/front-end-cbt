@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Computer Based-Test</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="/assets/images/lambang-unimma.png" type="image/x-icon" />
+    <!-- Fonts and icons -->
+    <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": ["Lato:300,400,700,900"]
+            },
+            custom: {
+                "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons"
+                ],
+                urls: ['/assets/css/fonts.min.css']
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/atlantis.min.css">
+    <link rel="stylesheet" href="/assets/css/demo.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-header">
+            <!-- Logo Header -->
+            <div class="logo-header">
+                <a href="#" class="logo">
+                    <img src="/assets/images/CBT.png"
+                        style="width:205px; height:42px;margin-top: 10px;margin-bottom: 18px;margin-left: -24px;"
+                        alt="navbar brand" class="navbar-brand">
+                </a>
+                <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                </button>
+                <button class="topbar-toggler more">
+                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.0312 7C17.2656 7 17.5 6.80469 17.5 6.53125V4.96875C17.5 4.73438 17.2656 4.5 17.0312 4.5H13.75V1.21875C13.75 0.984375 13.5156 0.75 13.2812 0.75H11.7188C11.4453 0.75 11.25 0.984375 11.25 1.21875V6.0625C11.25 6.60938 11.6406 7 12.1875 7H17.0312ZM6.25 6.0625V1.21875C6.25 0.984375 6.01562 0.75 5.78125 0.75H4.21875C3.94531 0.75 3.75 0.984375 3.75 1.21875V4.5H0.46875C0.195312 4.5 0 4.73438 0 4.96875V6.53125C0 6.80469 0.195312 7 0.46875 7H5.3125C5.82031 7 6.25 6.60938 6.25 6.0625ZM6.25 17.7812V12.9375C6.25 12.4297 5.82031 12 5.3125 12H0.46875C0.195312 12 0 12.2344 0 12.4688V14.0312C0 14.3047 0.195312 14.5 0.46875 14.5H3.75V17.7812C3.75 18.0547 3.94531 18.25 4.21875 18.25H5.78125C6.01562 18.25 6.25 18.0547 6.25 17.7812ZM13.75 17.7812V14.5H17.0312C17.2656 14.5 17.5 14.3047 17.5 14.0312V12.4688C17.5 12.2344 17.2656 12 17.0312 12H12.1875C11.6406 12 11.25 12.4297 11.25 12.9375V17.7812C11.25 18.0547 11.4453 18.25 11.7188 18.25H13.2812C13.5156 18.25 13.75 18.0547 13.75 17.7812Z"
+                            fill="#0E2F73" />
+                    </svg>
+                </button>
+                <div class="nav-toggle">
+                    <button class="btn btn-toggle toggle-sidebar">
+                        <div class="navbar-toggler-icon">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.0312 7C17.2656 7 17.5 6.80469 17.5 6.53125V4.96875C17.5 4.73438 17.2656 4.5 17.0312 4.5H13.75V1.21875C13.75 0.984375 13.5156 0.75 13.2812 0.75H11.7188C11.4453 0.75 11.25 0.984375 11.25 1.21875V6.0625C11.25 6.60938 11.6406 7 12.1875 7H17.0312ZM6.25 6.0625V1.21875C6.25 0.984375 6.01562 0.75 5.78125 0.75H4.21875C3.94531 0.75 3.75 0.984375 3.75 1.21875V4.5H0.46875C0.195312 4.5 0 4.73438 0 4.96875V6.53125C0 6.80469 0.195312 7 0.46875 7H5.3125C5.82031 7 6.25 6.60938 6.25 6.0625ZM6.25 17.7812V12.9375C6.25 12.4297 5.82031 12 5.3125 12H0.46875C0.195312 12 0 12.2344 0 12.4688V14.0312C0 14.3047 0.195312 14.5 0.46875 14.5H3.75V17.7812C3.75 18.0547 3.94531 18.25 4.21875 18.25H5.78125C6.01562 18.25 6.25 18.0547 6.25 17.7812ZM13.75 17.7812V14.5H17.0312C17.2656 14.5 17.5 14.3047 17.5 14.0312V12.4688C17.5 12.2344 17.2656 12 17.0312 12H12.1875C11.6406 12 11.25 12.4297 11.25 12.9375V17.7812C11.25 18.0547 11.4453 18.25 11.7188 18.25H13.2812C13.5156 18.25 13.75 18.0547 13.75 17.7812Z"
+                                    fill="#0E2F73" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- End Logo Header -->
+
+            <!-- Navbar Header -->
+            <nav class="navbar navbar-header navbar-expand-lg" data-background-color="purple">
+                <div class="container-fluid">
+                    <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                        <li class="nav-item dropdown hidden-caret submenu">
+                            <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"
+                                aria-expanded="false">
+                                <div class="avatar-sm">
+                                    <img src="/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user animated fadeIn">
+                                <div class="scroll-wrapper dropdown-user-scroll scrollbar-outer"
+                                    style="position: relative;">
+                                    <div class="dropdown-user-scroll scrollbar-outer scroll-content"
+                                        style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 274.833px;">
+                                        <li>
+                                            <div class="user-box">
+                                                <div class="avatar-lg"><img src="/assets/img/profile.jpg"
+                                                        alt="image profile" class="avatar-img rounded"></div>
+                                                <div class="u-text submenu mt-2">
+                                                    <h4>Administrator</h4>
+                                                    <p class="text-muted">Selamat Datang</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Password</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Logout</a>
+                                        </li>
+                                    </div>
+                                    <div class="scroll-element scroll-x">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar ui-draggable ui-draggable-handle"
+                                                style="width: 100px;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="scroll-element scroll-y">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar ui-draggable ui-draggable-handle"
+                                                style="height: 99px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar sidebar-style-2">
+            <div class="sidebar-wrapper scrollbar scrollbar-inner">
+                <div class="sidebar-content">
+                    <ul class="nav nav-primary">
+                        <li class="nav-section">
+                            <span class="sidebar-mini-icon">
+                                <i class="fa fa-ellipsis-h"></i>
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html">
+                                <i class="fas fa-tachometer-alt active"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_one">
+                                <i class="fas fa-book"></i>
+                                <p>Data Modul</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_one">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="../data_modul/topik.html">
+                                            <span class="sub-item">Topik</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../data_modul/soal.html">
+                                            <span class="sub-item">Soal</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../data_modul/import_soal.html">
+                                            <span class="sub-item">Import Soal</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../data_modul/daftar_soal.html">
+                                            <span class="sub-item">Daftar Soal</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../data_modul/file_manager.html">
+                                            <span class="sub-item">File Manager</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_two">
+                                <i class="fas fa-users"></i>
+                                <p>Data Peserta</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_two">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="../data_peserta/daftar_group.html">
+                                            <span class="sub-item">Daftar Group</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../data_peserta/daftar_peserta.html">
+                                            <span class="sub-item">Daftar Peserta</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../data_peserta/import_data.html">
+                                            <span class="sub-item">Import Data Peserta</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_three">
+                                <i class="fas fa-clipboard-list"></i>
+                                <p>Data Tes</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_three">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="tambah_tes.html">
+                                            <span class="sub-item"> Tambah Tes</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="daftar_tes.html">
+                                            <span class="sub-item">Daftar Tes</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="evaluasi_tes.html">
+                                            <span class="sub-item">Evaluasi Tes</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="hasil_tes.html">
+                                            <span class="sub-item">Hasil Tes</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="rekap_hasil.html">
+                                            <span class="sub-item">Rekap Hasil Tes</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="token.html">
+                                            <span class="sub-item">Token</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="hasil_tes_operator.html">
+                                            <span class="sub-item">Hasil Tes Operator</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_five">
+                                <i class="fas fa-wrench"></i>
+                                <p>Tool</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_five">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="../tool/backup_data.html">
+                                            <span class="sub-item">Backup Data</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#table_six">
+                                <i class="fas fa-cog"></i>
+                                <p>Pengaturan</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="table_six">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="../pengaturan/pengaturan_user.html">
+                                            <span class="sub-item">Pengaturan User</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../pengaturan/pengaturan_level.html">
+                                            <span class="sub-item">Pengaturan Level</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../pengaturan/pengaturan_menu.html">
+                                            <span class="sub-item">Pengaturan Menu</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+        <div class="main-panel">
+            <div class="content">
+                <div class="page-inner">
+                    <div class="page-header">
+                        <h4 class="page-title">Hasil tes</h4>
+                        <ul class="breadcrumbs">
+                            <li class="nav-home">
+                                <a href="#">
+                                    <i class="flaticon-home"></i>
+                                </a>
+                            </li>
+                            <li class="separator">
+                                <i class="flaticon-right-arrow"></i>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Dashboard</a>
+                            </li>
+                            <li class="separator">
+                                <i class="flaticon-right-arrow"></i>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Hasil Tes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row mt--2 mb-3">
+                        <div class="col-md-12">
+                            <h5>Hasil tes, menghapus hasil tes, mengunci tes, membuka kunci, dan menambah waktu tes
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Filter Hasil
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Tes</label>
+                                                <div class="col-sm-9">
+                                                    <input type="hidden" name="check" id="check" value="0">
+                                                    <select name="pilih-tes" id="pilih-tes" onclick="refresh_table()"
+                                                        class="form-control input-sm">
+                                                        <option value="2">Tes Uji Coba</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Group</label>
+                                                <div class="col-sm-9">
+                                                    <select name="pilih-group" id="pilih-group"
+                                                        class="form-control input-sm">
+                                                        <option value="semua">Semua Group</option>
+                                                        <option value="5">XI MM</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Waktu Tes</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" id="datepicker"
+                                                            name="datepicker">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Urutkan</label>
+                                                <div class="col-sm-9">
+                                                    <select name="pilih-urutkan" id="pilih-urutkan"
+                                                        class="form-control input-sm">
+                                                        <option value="tertinggi">Nilai Tertinggi</option>
+                                                        <option value="terendah">Nilai Terendah</option>
+                                                        <option value="waktu">Waktu Tes</option>
+                                                        <option value="nama">Nama User</option>
+                                                        <option value="tes">Tes</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Daftar Hasil Tes
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <button class="btn btn-primary btn-round ml-auto mb-3">
+                                            <i class="fas fa-download mr-2"></i>
+                                            Export ke Excel
+                                        </button>
+                                    </div>
+                                    <table
+                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
+                                        style="white-space: nowrap;">
+                                        <thead>
+                                            <th>No</th>
+                                            <th>Waktu Mulai</th>
+                                            <th>Waktu</th>
+                                            <th>Nama Tes</th>
+                                            <th>Group</th>
+                                            <th>Nama user</th>
+                                            <th>Poin</th>
+                                            <th>Status</th>
+                                            <th class="text-center">Action</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td align="center">
+                                                    <a href="" data-target="#addRowModal" data-toggle="modal"><i
+                                                            class="ml-2 fas fa-edit" data-toggle="tooltip"
+                                                            data-placement="bottom" title="Edit"></i></a>
+                                                    <a href=""><i class="ml-1 fas fa-window-close" data-toggle="tooltip"
+                                                            data-placement="bottom" title="Hapus"
+                                                            style="color:red;"></i></a>
+                                                    <input type="checkbox" name="edit-tes-id[3]" class="ml-1">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex">
+                                        <div class="p-2">
+                                            <button class="btn btn-danger btn-rounded-md ml-auto mb-3">
+                                                Hapus
+                                            </button>
+                                        </div>
+                                        <div class="p-2">
+                                            <button class="btn btn-primary btn-rounded-md ml-auto mb-3">
+                                                Hentikan
+                                            </button>
+                                        </div>
+                                        <div class="p-2">
+                                            <button class="btn btn-primary btn-rounded-md ml-auto mb-3">
+                                                Buka Tes
+                                            </button>
+                                        </div>
+                                        <div class="p-2">
+                                            <button class="btn btn-primary btn-rounded-md ml-auto mb-3">
+                                                Tambah Waktu
+                                            </button>
+                                        </div>
+                                        <div class="ml-auto p-2"><button
+                                                class="btn btn-default btn-rounded-md ml-auto mb-3">
+                                                Pilih Semua
+                                            </button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="copyright ml-auto">
+                        2022, made with <i class="fa fa-heart heart text-danger"></i> by <a
+                            href="https://www.unimma.ac.id">Biro Sistem Informasi</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
+    <script src="/assets/js/core/popper.min.js"></script>
+    <script src="/assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+
+    <!-- Chart JS -->
+    <script src="/assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="/assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+    <script src="/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Atlantis JS -->
+    <script src="/assets/js/atlantis.min.js"></script>
+    <script>
+        $('.table-own').DataTable({
+            "ordering": false,
+        });
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            )
+        });
+        $('#datepicker').datetimepicker({
+            format: 'MM/DD/YYYY',
+        });
+    </script>
+</body>
+
+</html>

@@ -312,7 +312,7 @@
             <div class="content">
                 <div class="page-inner">
                     <div class="page-header">
-                        <h4 class="page-title">Daftar Soal</h4>
+                        <h4 class="page-title">Import Data Peserta</h4>
                         <ul class="breadcrumbs">
                             <li class="nav-home">
                                 <a href="#">
@@ -329,39 +329,28 @@
                                 <i class="flaticon-right-arrow"></i>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Daftar Soal</a>
+                                <a href="#">Import Peserta</a>
                             </li>
                         </ul>
                     </div>
                     <div class="row mt--2 mb-3">
                         <div class="col-md-12">
-                            <h5>Daftar soal dan jawaban berdasarkan Modul dan Topik
+                            <h5>Penambahan data melalui Import data dari file Excel
                             </h5>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="card-title">Pilih Topik</div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row row-demo-grid">
-                                        <div class="col">
-                                            <h3>Pilih Topik</h3>
-                                            <p>Pilih terlebih dahulu Topik yang akan digunakan sebelum menambah atau
-                                                mengubah soal</p>
-                                        </div>
-                                        <div class="col mt-2">
-                                            <div id="topik">
-                                                <select name="topik" id="topik" class="form-control input-sm">
-                                                    <optgroup label="Modul Default">
-                                                        <option value="7">Soal Uji Coba</option>
-                                                    </optgroup>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="card card-dark bg-info-gradient">
+                                <div class=" card-body pb-1">
+                                    <h2 class="mb-2">Informasi</h2>
+                                    <p>Data siswa yang di import adalah data yang akan digunakan siswa untuk memulai tes
+                                        atau ujian. Form data siswa dapat di Download di menu Download yang ada di pojok
+                                        kanan kotak dialog.
+                                        <p class="mt--1">Pastikan terlebih dahulu data Group sudah terdaftar sebelum
+                                            melakukan Import
+                                            Data</p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -371,63 +360,27 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-title">
-                                        Daftar Soal Soal Uji Coba
+                                        Import Peserta
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="d-flex ">
-                                        <button class="btn btn-primary btn-round ml-auto mb-3"><i
-                                                class="mr-2 fa fa-download"></i>
-                                            Cetak Soal
+                                    <div class="d-flex">
+                                        <button class="btn btn-primary btn-round ml-auto mb-3">
+                                            <i class="mr-2 fa fa-download"></i>
+                                            Form Import Siswa
                                         </button>
-
                                     </div>
-                                    <table
-                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
-                                        style="white-space: nowrap;">
-                                        <thead>
-                                            <th class="text-center">No</th>
-                                            <th>Tipe Soal</th>
-                                            <th>Soal</th>
-                                            <th class="text-center">Action</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center">1</td>
-                                                <td>Pilihan ganda</td>
-                                                <td>
-                                                    <table class="table" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td colspan="3">
-                                                                    <p>Apa Kepanjangan dari SMP?</p>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td width="5%">1.</td>
-                                                                <td width="5%"><b>Benar</b></td>
-                                                                <td width="75%">
-                                                                    <p>Sekolah Menengah Pertama</p>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td align="center">
-                                                    <a href="" data-target="#addRowModal" data-toggle="modal"><i
-                                                            class="ml-2 fas fa-edit" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Edit Soal"></i></a>
-                                                    <a href="" data-target="#addRowModal" data-toggle="modal"><i
-                                                            class="ml-2 fas fa-edit" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Edit Jawaban"
-                                                            style="color:black;"></i></a>
-
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
+                                    <div class="form-group">
+                                        <label>Pilih File yang akan di import</label><br>
+                                        <input type="file" id="userfile" name="userfile">
+                                        <p class="mt-3 help-block">File Excel yang didukung adalah Microsoft Excel 2003
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex "><button class="btn btn-primary btn-rounded-md ml-auto mb-3">
+                                            Import
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

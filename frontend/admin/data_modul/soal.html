@@ -394,7 +394,7 @@
                                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header text-center">
-                                                    <h4 class="modal-title w-100">
+                                                    <h4 class="modal-title">
                                                         <span class="fw-mediumbold">
                                                             Tambah</span>
                                                         <span class="fw-light">
@@ -416,14 +416,16 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <div class="form-group from-group-default">
-                                                                    <label>Tambah
-                                                                        File Audio</label>
-                                                                    <input type="file" id="tambah-audio"
-                                                                        name="tambah-audio">
+                                                                <div class="form-group form-floating-label">
+                                                                    <div class="form-group from-group-default">
+                                                                        <label>Tambah
+                                                                            File Audio</label>
+                                                                        <input type="file" id="tambah-audio"
+                                                                            name="tambah-audio">
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-6">
+                                                            <div class="col-sm-6">
                                                                 <div class="form-group from-group-default">
                                                                     <p style="color: red;">*File audio yang akan
                                                                         ditambah pada soal. ( mp3).
@@ -505,7 +507,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <!-- End Modal -->
                                     <table
                                         class="table table-bordered table-responsive-md border-top border-left border-right table-own"
                                         style="white-space: nowrap;">
@@ -513,7 +515,7 @@
                                             <th class="text-center">No</th>
                                             <th>Soal</th>
                                             <th>Jawaban</th>
-                                            <th colspan="2" class="text-center">Action</th>
+                                            <th class="text-center">Action</th>
                                         </thead>
                                         <tbody>
                                             <tr>
@@ -581,6 +583,16 @@
                 ['view', ['fullscreen', 'codeview', 'help']]
             ]
         });
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            );
+        });
+        $('.table-own').DataTable({
+            "ordering": false,
+        });
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         });
@@ -597,31 +609,15 @@
     <!-- jQuery Scrollbar -->
     <script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
-
-    <!-- jQuery Sparkline -->
-    <script src="/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
     <!-- Datatables -->
     <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
 
+    <!-- Sweet Alert -->
+    <script src="/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
 
-    <!-- Atlantis DEMO methods, don't include it in your project! -->
-    <script src="/assets/js/setting-demo.js"></script>
-    <script>
-        $('.table-own').DataTable({
-            "ordering": false,
-        });
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Data anda berhasil di simpan',
-                'success'
-            )
-        });
-    </script>
 
 </body>
 

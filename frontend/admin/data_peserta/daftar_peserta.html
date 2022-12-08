@@ -491,36 +491,120 @@
                                                 <td>2021</td>
                                                 <td>Gelombang 3</td>
                                                 <td>Data Pembayaran, CBT</td>
-                                                <td>17-07-2021</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- <table
-                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
-                                        style="white-space: nowrap;">
-                                        <thead>
-                                            <th>No</th>
-                                            <th>Username</th>
-                                            <th>Nama</th>
-                                            <!-- <th>No</th>
-                                            <th>Username</th>
-                                            <th>Nama</th>
-                                            <th>Kelompok</th>
-                                            <th class="text-center" colspan="2">Action</th> -->
-                                    <!-- </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center">1</td>
-                                                <td>Pilihan ganda</td>
-                                                <td align="center">
-                                                    <a href="" data-target="#addRowModal" data-toggle="modal"><i
-                                                            class="ml-2 fas fa-edit" data-toggle="tooltip"
-                                                            data-placement="bottom" title="Edit"></i></a>
+                                                <td><a onclick="edit('2')" style="cursor: pointer;"
+                                                        class="btn btn-default btn-sm" data-toggle="modal"
+                                                        data-target="#editModal">Edit</a>
+                                                    <input type="checkbox" name="edit-user-id[2]" data-toggle="tooltip"
+                                                        data-placement="bottom" title="Pilih" class="ml-2">
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table> --> -->
+                                    </table>
                                 </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-center">
+                                                <h4 class="modal-title w-100">
+                                                    <span class="fw-mediumbold">
+                                                        Edit</span>
+                                                    <span class="fw-light">
+                                                        Peserta
+                                                    </span>
+                                                </h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form role="form">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group from-group-default">
+                                                                <label class="control-label">Username</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 mt--4">
+                                                            <div class="form-group from-group-default">
+                                                                <input type="text" class="form-control"
+                                                                    id="edit-username" name="edit-username" readonly="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group from-group-default">
+                                                                <label class="control-label">Password</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 mt--4">
+                                                            <div class="form-group from-group-default">
+                                                                <input type="password" class="form-control"
+                                                                    id="tambah-password" name="tambah-password">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group from-group-default">
+                                                                <label class="control-label">Nama
+                                                                    Lengkap
+                                                                    Peserta</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 mt--4">
+                                                            <div class="form-group from-group-default">
+                                                                <input type="text" class="form-control" id="tambah-nama"
+                                                                    name="tambah-nama"
+                                                                    placeholder="Nama Lengkap Peserta">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group from-group-default">
+                                                                <label class="control-label">Email</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 mt--4">
+                                                            <div class="form-group from-group-default">
+                                                                <input type="text" class="form-control"
+                                                                    id="tambah-email" name="tambah-email"
+                                                                    placeholder="Email Peserta (Boleh dikosongkan)">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group from-group-default">
+                                                                <label class="control-label">Group</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 mt--4">
+                                                            <div class="form-group from-group-default">
+                                                                <select name="tambah-group" id="tambah-group"
+                                                                    class="form-control input-sm">
+                                                                    <option value="5">XI MM</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 mt--1">
+                                                            <div class="form-group from-group-default">
+                                                                <p>NB : Peserta yang dihapus, maka semua hasil tes akan
+                                                                    ikut terhapus !</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer no-bd d-flex bd-highlight mb-3">
+                                                <div class="mr-auto p-2 bd-highlight"> <button type="button" id="simpan"
+                                                        class="btn btn-dark">Hapus</button></div>
+                                                <div class="p-2 bd-highlight"> <button type="button" id="simpan"
+                                                        class="btn btn-primary">Simpan</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-dismiss="modal">Batal</button></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Modal -->
                             </div>
                         </div>
                     </div>
@@ -552,8 +636,18 @@
                 ['view', ['fullscreen', 'codeview', 'help']]
             ]
         });
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            )
+        });
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
+        });
+        $('.table-own').DataTable({
+            "ordering": false,
         });
     </script>
     <!--   Core JS Files   -->
@@ -575,25 +669,14 @@
     <!-- Datatables -->
     <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
 
+    <!-- Sweet Alert -->
+    <script src="/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
 
     <!-- Atlantis DEMO methods, don't include it in your project! -->
     <script src="/assets/js/setting-demo.js"></script>
-    <script>
-        $('.table-own').DataTable({
-            "ordering": false,
-        });
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Data anda berhasil di simpan',
-                'success'
-            )
-        });
-    </script>
-
 </body>
 
 </html>

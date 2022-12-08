@@ -372,7 +372,7 @@
                                     <!-- Modal -->
                                     <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog"
                                         aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg     " role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header text-center">
                                                     <h4 class="modal-title">
@@ -380,6 +380,91 @@
                                                             Tambah</span>
                                                         <span class="fw-light">
                                                             Soal
+                                                        </span>
+                                                    </h4>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form role="form">
+                                                        <div class="row">
+                                                            <div class="col-md-12 pr-0">
+                                                                <div class="form-group form-floating-label">
+                                                                    <input id="addGelombang" type="text"
+                                                                        class="form-control input-border-bottom"
+                                                                        required="">
+                                                                    <label for="addGelombang" class="placeholder">Nama
+                                                                        Topik</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group form-floating-label">
+                                                                    <input id="addDeskripsi" type="text"
+                                                                        class="form-control input-border-bottom"
+                                                                        required="">
+                                                                    <label for="addDeskripsi"
+                                                                        class="placeholder">Desikripsi</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label>Status</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="tambah-status" name="tambah-status"
+                                                                        value="AKTIF" readonly="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer no-bd justify-content-center">
+                                                    <button type="button" id="simpan"
+                                                        class="btn btn-primary">Simpan</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-dismiss="modal">Batal</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Modal -->
+                                    <table
+                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
+                                        style="white-space: nowrap;">
+                                        <thead align="center">
+                                            <th>No</th>
+                                            <th>Nama Topik</th>
+                                            <th>Deskripsi</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </thead>
+                                        <tbody align="center">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>CBT PMB 2023</td>
+                                                <td>CBT PMB 2023</td>
+                                                <td>Aktif</td>
+                                                <td><a onclick="" style="cursor: pointer;"
+                                                        class="btn btn-default btn-sm" data-toggle="modal"
+                                                        data-target="#editTopik">Edit</a>
+                                                    <input type="checkbox" name="" class="ml-2" data-toggle="tooltip"
+                                                        data-placement="bottom" title="Pilih">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="editTopik" tabindex="-1" role="dialog"
+                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header text-center">
+                                                    <h4 class="modal-title">
+                                                        <span class="fw-mediumbold">
+                                                            Edit</span>
+                                                        <span class="fw-light">
+                                                            Topik
                                                         </span>
                                                     </h4>
                                                     <button type="button" class="close" data-dismiss="modal"
@@ -421,39 +506,14 @@
                                                 </div>
                                                 <div class="modal-footer no-bd justify-content-center">
                                                     <button type="button" id="simpan"
-                                                        class="btn btn-primary">Tambah</button>
+                                                        class="btn btn-primary">Simpan</button>
+                                                    </button>
                                                     <button type="button" class="btn btn-danger"
                                                         data-dismiss="modal">Batal</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <table
-                                        class="table table-bordered table-responsive-md border-top border-left border-right table-own"
-                                        style="white-space: nowrap;">
-                                        <thead align="center">
-                                            <th>No</th>
-                                            <th>Nama Topik</th>
-                                            <th>Deskripsi</th>
-                                            <th>Status</th>
-                                            <th colspan="2">Action</th>
-                                        </thead>
-                                        <tbody align="center">
-                                            <tr>
-                                                <td>1</td>
-                                                <td>CBT PMB 2023</td>
-                                                <td>CBT PMB 2023</td>
-                                                <td>Aktif</td>
-                                                <td><a onclick="" style="cursor: pointer;"
-                                                        class="btn btn-default btn-sm">Edit</a>
-                                                </td>
-                                                <td>
-                                                    <input type="checkbox" name="">
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex flex-row-reverse bd-highlight">
@@ -482,7 +542,6 @@
             </footer>
         </div>
     </div>
-
     <!--   Core JS Files   -->
     <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
@@ -507,6 +566,7 @@
 
     <!-- Datatables -->
     <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
+
     <!-- Bootstrap Notify -->
     <script src="/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
@@ -520,8 +580,18 @@
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
     <script>
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            );
+        });
         $('.table-own').DataTable({
             "ordering": false,
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
         });
     </script>
 
