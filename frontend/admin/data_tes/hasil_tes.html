@@ -29,6 +29,10 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/atlantis.min.css">
     <link rel="stylesheet" href="/assets/css/demo.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -368,8 +372,7 @@
                                                 <label class="col-sm-3 control-label">Waktu Tes</label>
                                                 <div class="col-sm-9">
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" id="datepicker"
-                                                            name="datepicker">
+                                                        <input type="text" class="form-control" name="datepicker">
                                                         <div class="input-group-append">
                                                             <span class="input-group-text">
                                                                 <i class="fa fa-calendar"></i>
@@ -494,6 +497,16 @@
             </footer>
         </div>
     </div>
+    <script>
+        $('input[name="datepicker"]').daterangepicker({
+            timePicker: true,
+            startDate: moment().startOf('hour'),
+            endDate: moment().startOf('hour').add(32, 'hour'),
+            locale: {
+                format: 'M/DD hh:mm A'
+            }
+        });
+    </script>
     <!--   Core JS Files   -->
     <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
@@ -528,21 +541,6 @@
 
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
-    <script>
-        $('.table-own').DataTable({
-            "ordering": false,
-        });
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Data anda berhasil di simpan',
-                'success'
-            )
-        });
-        $('#datepicker').datetimepicker({
-            format: 'MM/DD/YYYY',
-        });
-    </script>
 </body>
 
 </html>

@@ -28,9 +28,11 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/atlantis.min.css">
-    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/demo.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -382,17 +384,6 @@
                                         </div>
                                         <div class="col-md-6 mt--4">
                                             <div class="form-group">
-                                                <label>Input DateTime Picker</label>
-                                                <div class="input-group">
-                                                    <input type="text" name="datetimes">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text">
-                                                            <i class="fa fa-calendar"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="form-group">
                                                 <label class="ml-2">Rentang waktu</label>
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
@@ -406,7 +397,7 @@
                                                     </div>
                                                     <p class="mt-2 text-muted">Rentang waktu tes dilaksanakan</p>
                                                 </div>
-                                            </div> -->
+                                            </div>
                                         </div>
                                         <div class="col-md-5 mt--4">
                                             <div class="form-group">
@@ -498,20 +489,24 @@
             </footer>
         </div>
     </div>
-    <!-- daterange -->
+
     <script>
-        $(function () {
-            $('input[name="datetimes"]').daterangepicker({
-                timePicker: true,
-                startDate: moment().startOf('hour'),
-                endDate: moment().startOf('hour').add(32, 'hour'),
-                locale: {
-                    format: 'M/DD hh:mm A'
-                }
-            });
+        $('input[name="datepicker"]').daterangepicker({
+            timePicker: true,
+            startDate: moment().startOf('hour'),
+            endDate: moment().startOf('hour').add(32, 'hour'),
+            locale: {
+                format: 'M/DD hh:mm A'
+            }
+        });
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            );
         });
     </script>
-
     <!--   Core JS Files   -->
     <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
@@ -546,18 +541,7 @@
 
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
-    <script>
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Data anda berhasil di simpan',
-                'success'
-            )
-        });
-        $('#datepicker').datetimepicker({
-            format: 'MM/DD/YYYY',
-        });
-    </script>
+
 </body>
 
 </html>
