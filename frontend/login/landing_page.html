@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Computer Based-Test</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="/assets/images/lambang-unimma.png" type="image/x-icon" />
+    <!-- icon judul -->
+    <!-- <link rel="icon" href="assets/img/icon.ico" type="image/x-icon" /> -->
+
+    <!-- Fonts and icons -->
+    <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
+    <!-- <script src="frontend/libraries/atlantis/atlantis/js/plugin/webfont/webfont.min.js"></script> -->
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Lato:300,400,700,900"]
+            },
+            custom: {
+                families: [
+                    "Flaticon",
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["/frontend/libraries/atlantis/atlantis/css/fonts.min.css"],
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            },
+        });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/atlantis.min.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+</head>
+
+<body style="overflow-y: hidden">
+    <div class="row">
+        <!-- image kiri -->
+        <div class="col-md-6 colom-left">
+            <h3>Computer Based-Test</h3>
+            <div class="pick-sign float-left">
+                <img src="/assets/images/iconPetikLogin.png" alt="" />
+            </div>
+            <p class="mx-3">
+                Selamat datang di Sistem Tes berbasis komputer Universitas Muhammadiyah Magelang<br /><br />
+            </p>
+            <div class="elbow-sign float-right">
+                <img src="/assets/images/iconSikuLogin.png" alt="" />
+            </div>
+            <div class="grid-sign float-left">
+                <img src="/assets/images/iconLoginBawah.png" alt="" />
+            </div>
+        </div>
+        <!-- text kanan -->
+        <div class="col-sm-6 pb-5">
+            <div class="colom-right">
+                <div class="back-sign" style="opacity: 0">
+                    <i class="fas fa-chevron-left">
+                        <a href="#">&nbsp;Kembali</a>
+                    </i>
+                </div>
+                <img src="/assets/images/unimmalogo.png" width="309px" alt="" />
+                <!-- after logo -->
+                <div class="card p-2">
+                    <a href="login_user.html" class="text-decoration-none">
+                        <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18 4.15625C20.61 4.15625 22.725 6.2125 22.725 8.75C22.725 11.2875 20.61 13.3438 18 13.3438C15.39 13.3438 13.275 11.2875 13.275 8.75C13.275 6.2125 15.39 4.15625 18 4.15625ZM18 23.8437C24.6825 23.8437 31.725 27.0375 31.725 28.4375V30.8438H4.275V28.4375C4.275 27.0375 11.3175 23.8437 18 23.8437ZM18 0C13.0275 0 9 3.91562 9 8.75C9 13.5844 13.0275 17.5 18 17.5C22.9725 17.5 27 13.5844 27 8.75C27 3.91562 22.9725 0 18 0ZM18 19.6875C11.9925 19.6875 0 22.6187 0 28.4375V35H36V28.4375C36 22.6187 24.0075 19.6875 18 19.6875Z"
+                                fill="black" />
+                        </svg>
+
+                        <h4><b>Peserta</b></h4>
+                        <p>Saya sudah punya akun</p>
+                    </a>
+                </div>
+
+                <!-- card kedua -->
+                <div class="card card-second p-2">
+                    <a href="login_operator.html" class="text-decoration-none">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.3889 22.125V25.4583C13.2947 25.4583 10.3272 26.5119 8.13931 28.3873C5.95139 30.2626 4.72222 32.8062 4.72222 35.4583H0.833336C0.833336 31.9221 2.47222 28.5307 5.38945 26.0303C8.30669 23.5298 12.2633 22.125 16.3889 22.125V22.125ZM16.3889 20.4583C9.94306 20.4583 4.72222 15.9833 4.72222 10.4583C4.72222 4.93334 9.94306 0.458344 16.3889 0.458344C22.8347 0.458344 28.0556 4.93334 28.0556 10.4583C28.0556 15.9833 22.8347 20.4583 16.3889 20.4583ZM16.3889 17.125C20.6861 17.125 24.1667 14.1417 24.1667 10.4583C24.1667 6.77501 20.6861 3.79168 16.3889 3.79168C12.0917 3.79168 8.61111 6.77501 8.61111 10.4583C8.61111 14.1417 12.0917 17.125 16.3889 17.125ZM33.8889 27.125H35.8333V35.4583H20.2778V27.125H22.2222V25.4583C22.2222 24.1323 22.8368 22.8605 23.9308 21.9228C25.0247 20.9851 26.5085 20.4583 28.0556 20.4583C29.6027 20.4583 31.0864 20.9851 32.1803 21.9228C33.2743 22.8605 33.8889 24.1323 33.8889 25.4583V27.125ZM30 27.125V25.4583C30 25.0163 29.7951 24.5924 29.4305 24.2798C29.0658 23.9673 28.5713 23.7917 28.0556 23.7917C27.5399 23.7917 27.0453 23.9673 26.6806 24.2798C26.316 24.5924 26.1111 25.0163 26.1111 25.4583V27.125H30Z"
+                                fill="black" />
+                        </svg>
+                        <h4><b>Operator</b></h4>
+                        <p>Login Khusus Operator</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/retina.min.js"></script>
+    <script src="/assets/js/atlantis.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://kit.fontawesome.com/55e3ebc75c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

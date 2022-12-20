@@ -5,3 +5,224 @@
 .icon:hover i{
   transform: scale(1.4);
 }
+body {
+  background-color: #f5f6f8;
+  font-family: "Inter", sans-serif;
+  color: #555555;
+  overflow-x: hidden;
+}
+
+.colom-left {
+  text-align: center;
+  background-image: url("../images/bgLogin.png");
+  padding: 110px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 99%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 980px) {
+  .colom-left {
+    display: none;
+  }
+}
+
+.colom-left .pick-sign {
+  margin-top: 20%;
+}
+
+.colom-left .elbow-sign {
+  margin-right: 10%;
+  margin-top: -10%;
+}
+
+.colom-left .grid-sign {
+  margin-top: 250px;
+  margin-left: -10%;
+}
+
+.colom-left h3,
+.colom-left p {
+  color: #fff;
+}
+
+.colom-left h3 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.colom-left p {
+  margin-top: 140px;
+  padding: 10px 15px 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.back-sign {
+  margin-top: -30px;
+  padding-bottom: 20px;
+}
+
+.back-sign a {
+  color: black;
+  text-decoration: none;
+}
+
+.colom-right {
+  max-height: 850px;
+  margin-top: 50px;
+}
+
+.colom-right img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colom-right h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.colom-right .card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+  width: 300px;
+  max-height: 100px;
+}
+
+.colom-right .card:hover {
+  opacity: 60%;
+}
+
+.colom-right .card a svg {
+  margin-bottom: -60px;
+  margin-left: 20px;
+}
+
+.colom-right .card a h4,
+.colom-right .card a p {
+  margin-left: 80px;
+  color: #000;
+}
+
+.colom-right .card a p {
+  margin-top: -11px;
+  font-size: 14px;
+}
+
+.colom-right .card-second {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 300px;
+  max-height: 100px;
+}
+
+.colom-right .card-second a svg {
+  margin-bottom: -40px;
+  margin-left: 25px;
+}
+
+.colom-right .card-second a h4,
+.colom-right .card-second a p {
+  margin-left: 80px;
+  color: #000;
+  margin-top: -11px;
+}
+
+.colom-right .card-second a p {
+  font-size: 14px;
+}
+
+.colom-right .form-group {
+  font-size: 14px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colom-right .form-group .placeholder-style .form-control:focus {
+  border-color: #ced4da;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-left: none;
+}
+
+.colom-right .form-group .placeholder-style ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #bdbdbd;
+}
+
+.colom-right .form-group .placeholder-style ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #bdbdbd;
+}
+
+.colom-right .form-group .placeholder-style :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #bdbdbd;
+}
+
+.colom-right .form-group .placeholder-style :-moz-placeholder {
+  /* Firefox 18- */
+  color: #bdbdbd;
+}
+
+.colom-right .see-pass {
+  float: right;
+  margin-top: -25px;
+  margin-right: 10px;
+}
+
+.colom-right .btn-primary {
+  width: 300px;
+  background-color: #1565d8;
+  border-radius: 6px;
+}
+
+.colom-right .btn-primary:hover {
+  background-color: #2670d6;
+}
+
+.row-forget a {
+  color: #1565d8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-style {
+  background-color: #fff;
+  border-color: #ced4da;
+  color: #bdbdbd;
+  pointer-events: none;
+  border-right: none;
+}
+
+.success-sign {
+  margin-top: 105px;
+}
+
+.success-sign h5 {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.success-sign p {
+  padding: 176px 156px 10px;
+  padding-top: 10px;
+  font-size: 14px;
+}

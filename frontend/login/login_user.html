@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Computer Based-Test</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="/assets/images/lambang-unimma.png" type="image/x-icon" />
+    <!-- icon judul -->
+    <!-- <link rel="icon" href="assets/img/icon.ico" type="image/x-icon" /> -->
+
+    <!-- Fonts and icons -->
+    <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Lato:300,400,700,900"]
+            },
+            custom: {
+                families: [
+                    "Flaticon",
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["frontend/libraries/atlantis/atlantis/css/fonts.min.css"],
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            },
+        });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/atlantis.min.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+</head>
+
+<body>
+    <div class="row">
+        <!-- image kiri -->
+        <div class="col-md-6 colom-left">
+            <h3>Computer Based-Test</h3>
+            <div class="pick-sign float-left">
+                <img src="/assets/images/iconPetikLogin.png" alt="" />
+            </div>
+            <p class="mx-3">
+                Selamat datang di Sistem Tes berbasis komputer Universitas Muhammadiyah Magelang<br /><br />
+            </p>
+            <div class="elbow-sign float-right">
+                <img src="/assets/images/iconSikuLogin.png" alt="" />
+            </div>
+            <div class="grid-sign float-left">
+                <img src="/assets/images/iconLoginBawah.png" alt="" />
+            </div>
+        </div>
+        <!-- text kanan -->
+        <div class="col-sm-6 col-md-6 pb-5">
+            <div class="colom-right">
+                <div class="back-sign">
+                    <i class="fas fa-chevron-left">
+                        <a href="landing_page.html">&nbsp;Kembali</a>
+                    </i>
+                </div>
+                <img src="/assets/images/unimmalogo.png" width="309px" alt="" />
+                <h2>Login</h2>
+                <br />
+                <form action="#">
+                    <div class="form-group">
+                        <div class="placeholder-style">
+                            <label for="email">Email</label>
+                            <div class="input-group shadow-sm mb-2">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-style" type="button">
+                                        <i class="far fa-user"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control" id="email" placeholder="Email " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="placeholder-style">
+                            <label for="password">Kata Sandi</label>
+                            <div class="input-group shadow-sm mb-2">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-style" type="button">
+                                        <i class="fas fa-lock"></i>
+                                    </button>
+                                </div>
+                                <input type="password" class="form-control" id="password" placeholder="Kata Sandi" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2">
+                        <a type="submit" class="btn form-control btn-primary" href="#">
+                            Masuk
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/retina.min.js"></script>
+    <script src="/assets/js/atlantis.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://kit.fontawesome.com/55e3ebc75c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
