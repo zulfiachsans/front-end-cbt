@@ -100,7 +100,8 @@
                                         </li>
                                         <li>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Password</a>
+                                            <a class="dropdown-item" href="#modalPassword"
+                                                data-toggle="modal">Password</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="../login/login_operator.html">Logout</a>
                                         </li>
@@ -129,6 +130,61 @@
             </nav>
             <!-- End Navbar -->
         </div>
+        <!-- Start Modal -->
+        <div class="modal fade" id="modalPassword" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title">
+                            <span class="fw-mediumbold">
+                                Rubah</span>
+                            <span class="fw-light">
+                                Password
+                            </span>
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-md-12 mt-1">
+                                    <div class="form-group form-floating-label">
+                                        <input id="password-old" type="password"
+                                            class="form-control input-border-bottom" required="">
+                                        <label for="password-old" class="placeholder">Old Password
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group form-floating-label">
+                                        <input id="password-new" type="password"
+                                            class="form-control input-border-bottom" required="">
+                                        <label for="password-new" class="placeholder">New Password
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group form-floating-label">
+                                        <input id="password-confirm" type="password"
+                                            class="form-control input-border-bottom" required="">
+                                        <label for="password-confirm" class="placeholder">Confirm Password
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer no-bd justify-content-center">
+                        <button type="button" id="simpan" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
         <!-- Sidebar -->
         <div class="sidebar sidebar-style-2">
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
@@ -396,6 +452,15 @@
         </div>
 
     </div>
+    <script>
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Data anda berhasil di simpan',
+                'success'
+            );
+        });
+    </script>
     <!--   Core JS Files   -->
     <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
@@ -408,10 +473,41 @@
     <!-- jQuery Scrollbar -->
     <script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
+    <!-- Chart JS -->
+    <script src="/assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="/assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="/assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+    <script src="/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script>
+        $(document).on('click', '#simpan', function (e) {
+            swal(
+                'Berhasil',
+                'Password berhasil di rubah',
+                'success'
+            );
+        });
+    </script>
+
+
 </body>
 
 </html>
