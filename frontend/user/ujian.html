@@ -103,7 +103,7 @@
                                             <a class="dropdown-item" href="#modalPassword"
                                                 data-toggle="modal">Password</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="../login/login_operator.html">Logout</a>
+                                            <a class="dropdown-item" href="../login/login_user.html">Logout</a>
                                         </li>
                                     </div>
                                     <div class="scroll-element scroll-x">
@@ -178,7 +178,7 @@
                         </form>
                     </div>
                     <div class="modal-footer no-bd justify-content-center">
-                        <button type="button" id="simpan" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-primary">Simpan</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
                     </div>
                 </div>
@@ -252,12 +252,12 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-3">
-                            <div class="card card-stats card-info card-round">
+                            <div class="card card-stats card-danger card-round">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-5">
                                             <div class="icon-big text-center icon">
-                                                <i class="flaticon-time"></i>
+                                                <i class="flaticon-alarm"></i>
                                             </div>
                                         </div>
                                         <div class="col-7 col-stats">
@@ -274,15 +274,34 @@
                             <div class="card card-stats card-success card-round">
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-5">
+                                        <div class="col-3">
                                             <div class="icon-big text-center icon">
                                                 <i class="flaticon-calendar"></i>
                                             </div>
                                         </div>
-                                        <div class="col-7 col-stats">
+                                        <div class="col-9 col-stats">
                                             <div class="numbers">
                                                 <p class="card-category">Tanggal</p>
-                                                <h4 class="card-title">30 Menit</h4>
+                                                <h4 class="mt-2" id="tanggal"></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-stats card-secondary card-round">
+                                <div class="card-body ">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="icon-big text-center icon">
+                                                <i class="flaticon-time"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 col-stats">
+                                            <div class="numbers">
+                                                <p class="card-category">Jam</p>
+                                                <h4 class="card-title clock" id="DisplayClock" onload="showTime()"></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -293,24 +312,134 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
-                                <div class="card-header bg-success">
-                                    <div class="card-title" style="color:white;">Petunjuk Penggunaan</div>
+                                <div class="card-header">
+                                    <div class="card-title">Daftar Tes</div>
                                 </div>
                                 <div class="card-body">
-                                    <dl>
-                                        <dt>Petunjuk</dt>
-                                        <dd>
-                                            Calon peserta diharapkan untuk memahami petunjuk sebelum memulai tes
-                                            <ol>
-                                                <li>Pastikan peserta tes sudah mendapatkan akun dari operator</li>
-                                                <li>Peserta tes memasukkan token yang sudah diberikan</li>
-                                                <li>Peserta tes akan mengerjakan soal dengan waktu yang sudah ditentukan
-                                                    oleh operator
-                                                </li>
-                                                <li>Pastikan Peserta tes sudah menjawab semua jawaban</li>
-                                            </ol>
-                                        </dd>
-                                    </dl>
+                                    <table
+                                        class="table table-bordered table-responsive-md table-hover border-top border-left border-right"
+                                        style="white-space: nowrap;">
+                                        <thead>
+                                            <th>No</th>
+                                            <th>Tes</th>
+                                            <th>Waktu Mulai Tes</th>
+                                            <th>Waktu Selesai Tes</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td>Pilihan ganda</td>
+                                                <td> 2022-12-30 14:10:00</td>
+                                                <td> 2022-12-30 14:10:00</td>
+                                                <td> 6.00</td>
+                                                <td align="center">
+                                                    <a onclick="" style="cursor: pointer;color:white;"
+                                                        class="btn btn-success btn-sm" data-toggle="modal"
+                                                        data-target="#kerjakan">Kerjakan</a>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="kerjakan" tabindex="-1" role="dialog"
+                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title w-100 text-center">
+                                                        <span class="fw-mediumbold">
+                                                            Kerjakan</span>
+                                                        <span class="fw-light">
+                                                            Soal
+                                                        </span>
+                                                    </h4>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form role="form">
+                                                        <div class="row">
+                                                            <table class="table table-striped">
+                                                                <tbody>
+                                                                    <tr style="height: 45px;">
+                                                                        <td style="vertical-align: middle;"></td>
+                                                                        <td
+                                                                            style="vertical-align: middle;text-align: right;">
+                                                                            Nama Peserta : </td>
+                                                                        <td style="vertical-align: middle;"><b>Joko
+                                                                                Susanto</b></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr style="height: 45px;">
+                                                                        <td style="vertical-align: middle;"></td>
+                                                                        <td
+                                                                            style="vertical-align: middle;text-align: right;">
+                                                                            Tes : </td>
+                                                                        <td style="vertical-align: middle;"><b>Tes Uji
+                                                                                Coba</b></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr style="height: 45px;">
+                                                                        <td style="vertical-align: middle;"></td>
+                                                                        <td
+                                                                            style="vertical-align: middle;text-align: right;">
+                                                                            Waktu : </td>
+                                                                        <td style="vertical-align: middle;">30 menit
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr style="height: 45px;">
+                                                                        <td></td>
+                                                                        <td
+                                                                            style="vertical-align: middle;text-align: right;">
+                                                                            Poin Dasar : </td>
+                                                                        <td style="vertical-align: middle;">1.00</td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr style="height: 45px;">
+                                                                        <td></td>
+                                                                        <td
+                                                                            style="vertical-align: middle;text-align: right;">
+                                                                            Poin Maksimal : </td>
+                                                                        <td style="vertical-align: middle;">2.00</td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr style="height: 45px;">
+                                                                        <td></td>
+                                                                        <td
+                                                                            style="vertical-align: middle;text-align: right;">
+                                                                            Token : </td>
+                                                                        <td style="vertical-align: middle;">
+                                                                            <div class="form-group form-floating-label">
+                                                                                <input id="token" type="text"
+                                                                                    class="form-control input-border-bottom"
+                                                                                    required="">
+                                                                                <label for="token"
+                                                                                    class="placeholder">Token</label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <input type="hidden" name="token" id="token">
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer no-bd justify-content-center">
+                                                    <button type="button" class="btn btn-success">Kerjakan</button>
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-dismiss="modal">Batal</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -327,20 +456,27 @@
             </footer>
         </div>
     </div>
+
     <script>
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Data anda berhasil di simpan',
-                'success'
-            );
-        });
+        var tw = new Date();
+        if (tw.getTimezoneOffset() == 0)(a = tw.getTime() + (7 * 60 * 60 * 1000))
+        else(a = tw.getTime());
+        tw.setTime(a);
+        var tahun = tw.getFullYear();
+        var hari = tw.getDay();
+        var bulan = tw.getMonth();
+        var tanggal = tw.getDate();
+        var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+        var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
+            "September", "Oktober", "Nopember", "Desember");
+        document.getElementById("tanggal").innerHTML = tanggal + " " + bulanarray[bulan] +
+            " " + tahun;
     </script>
     <!--   Core JS Files   -->
     <script src="/assets/js/core/jquery.3.2.1.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
     <script src="/assets/js/core/bootstrap.min.js"></script>
-
+    <script src="/assets/js/showtime.js"></script>
     <!-- jQuery UI -->
     <script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
@@ -372,16 +508,6 @@
 
     <!-- Atlantis JS -->
     <script src="/assets/js/atlantis.min.js"></script>
-    <script>
-        $(document).on('click', '#simpan', function (e) {
-            swal(
-                'Berhasil',
-                'Password berhasil di rubah',
-                'success'
-            );
-        });
-    </script>
-
 
 </body>
 
